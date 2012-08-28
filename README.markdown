@@ -2,7 +2,7 @@ Mapgears labs - Hyde 0.8
 ==========================
 
 This repository holds the template and content used in combinaison with Hyde 0.8
-to build the labs.mapgears.com web page.
+to build the [labs.mapgears.com] [4] web page.
 
 
 Requirements
@@ -112,6 +112,7 @@ he kindly answered: "Thank you, Lakshmi!".
 
 References
 -----------
+* [Mapgears labs website] [4]
 * [Hyde Github Repository] [1]
 * [Hyde 0.8 official documentation] [2]
 * [Steve Losh article - moving from django to hyde] [3]
@@ -119,3 +120,4 @@ References
 [1]: https://github.com/hyde/hyde/                                 "Hyde Github repository"
 [2]: http://hyde.github.com/index.html                             "Hyde 0.8 official documentation"
 [3]: http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/ "Steve Losh article about Hyde"
+[4]: http://labs.mapgears.com                                      "Official website using this source"
