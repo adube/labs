@@ -116,6 +116,8 @@ References
 * [Hyde Github Repository] [1]
 * [Hyde 0.8 official documentation] [2]
 * [Hyde Google Groups Forum] [5]
+* [Markdown syntax] [6]
+* [Jinja Template Designer Documentation] [7]
 * [Steve Losh article - moving from django to hyde] [3]
 
 [1]: https://github.com/hyde/hyde/                                 "Hyde Github repository"
@@ -123,3 +125,5 @@ References
 [3]: http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/ "Steve Losh article about Hyde"
 [4]: http://labs.mapgears.com                                      "Official website using this source"
 [5]: https://groups.google.com/forum/#!forum/hyde-dev              "Hyde-dev Google Groups"
+[6]: http://daringfireball.net/projects/markdown/syntax            "Markdown is a text-to-HTML conversion tool for web writers"
+[7]: http://jinja.pocoo.org/docs/templates/                        "Jinja template engine for Python"
