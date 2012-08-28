@@ -16,7 +16,7 @@ create a new post
 ------------------
 The easiest way is to copy an existing one an rename it :
 
-    cp content/archive/pim.html content/archive/mypost.html
+    cp en/content/archive/staff-tracking.html en/content/archive/mypost.html
 
 The part contains the page global informations, which are pretty much
 self-explanatory. Edit each line accordingly.
@@ -38,28 +38,40 @@ self-explanatory. Edit each line accordingly.
   the archives for this post. The path is relative to the content/media/images
   directory. If not set, the preview image is used with its dimension shrinked.
 
+Here's an example :
+
     ---
-    id: pim
-    title: PIM
+    id: staff-tracking
+    title: Staff Tracking
     description: >
-        Collect information about features in clusters.
-    created: !!timestamp '2009-11-17 15:00:00'
+        Monitor outdoor events staff using an interactive webmapping application
+    created: !!timestamp '2012-08-20 10:00:00'
     tags:
+        - basemaps
+        - extjs
+        - geoext
+        - imposm
         - mapserver
         - openlayers
         - openstreetmap
-    live: http://dev4.mapgears.com/ebdata/demo-pim/
-    preview: pim-preview.jpg
-    thumbnail: 
+        - postgis
+    live: http://labs.mapgears.com/staff-tracking/
+    preview: staff-tracking-preview.jpg
+    thumbnail: staff-tracking-thumb.jpg
     ---
     
 Next are the internal links. You could skip using those completely and use
 html instead, but I find it cleaner to structure the links that way. The last
 two ones don't need to be changed.
-    
+
+    [basemaps]:      {{links.basemaps}}
+    [extjs]:         {{links.extjs}}
+    [geoext]:        {{links.geoext}}
+    [imposm]:        {{links.imposm}}
     [mapserver]:     {{links.mapserver}}
     [openlayers]:    {{links.openlayers}}
     [openstreetmap]: {{links.openstreetmap}}
+    [postgis]:       {{links.postgis}}
 
     [live]:    {{resource.meta.live}}
     [preview]: {{media_url('images/'~resource.meta.preview)}}
@@ -70,7 +82,7 @@ found a way to use a variable there, so I copy the content of the 'description'
 above here.
     
     {% mark excerpt -%}
-    Collect information about features in clusters.
+    Monitor outdoor events staff using an interactive webmapping application
     {%- endmark %}
 
 The next part doesn't need to be edited. Leave it as it is. Basically, it
@@ -85,21 +97,34 @@ combine both. It's up to you.
 
 You can add external links that refers to the technologies used in the demo.
 
-    This demo features an OpenLayers map showing vector features coming from a
-    remote server, which are clustered on client-side when too close to each
-    other. A click on a feature shows a popup with aggregated information if it
-    contains clusters, or a complete detail if it only contains one.
+    This webmapping application was built and used to monitor staff of outdoor
+    events, such as concerts and shows, on an interactive map. It was designed
+    to be used in a standard browser and tablets.
 
-    The base maps come directly from OpenStreetMap server. The features are
-    obtained using the OGC WFS protocol, with MapServer.
+    Zones and staff icons are displayed on the map and refreshed every 15
+    seconds, mimicking what it could look like when used during a real event.
+
+    The client-side application uses OpenLayers, GeoExt and ExtJS as JavaScript
+    frameworks. The base maps was created using MapServer Basemaps and Imposm
+    using OpenStreetMap data. The features are obtained using the OGC WFS
+    protocol, with MapServer and come from a PostGIS database. 
+
+    The demo itself contains a "About this demo" button, which contains more
+    information and technical details.
 
     * See the [Live demo][live] in action
+    * Learn more about [Basemaps][basemaps]
+    * Learn more about [ExtJS][extjs]
+    * Learn more about [GeoExt][geoext]
+    * Learn more about [Imposm][imposm]
     * Learn more about [MapServer][mapserver]
     * Learn more about [OpenLayers][openlayers]
     * Learn more about [OpenStreetMap][openstreetmap]
+    * Learn more about [PostGIS][postgis]
 
 Once you're done, deploy and visit to see your changes. Add, commit and push
-your changes once everything looks okay.
+your changes once everything looks okay. You can optionally create an entry
+in the French (fr) archive as well.
     
 
 Other notes
