@@ -10,6 +10,7 @@ tags:
     - extjs
     - geoext
     - imposm
+    - mapcache
     - mapserver
     - openlayers
     - openstreetmap
@@ -23,6 +24,7 @@ thumbnail: staff-tracking-thumb.jpg
 [extjs]:         {{links.extjs}}
 [geoext]:        {{links.geoext}}
 [imposm]:        {{links.imposm}}
+[mapcache]:      {{links.mapcache}}
 [mapserver]:     {{links.mapserver}}
 [openlayers]:    {{links.openlayers}}
 [openstreetmap]: {{links.openstreetmap}}
@@ -50,11 +52,12 @@ rafraichie à toutes les 15 secondes, ce qui émule ce dont l'application aurait
 l'air pendant un événement réel.
 
 L'application client utilise OpenLayers, GeoExt et ExtJS comme librairies
-JavaScript. La carte de fond a été crée à l'aide de MapServer Basemaps età
-Imposm avec les données gratuites d'OpenStreetMap. Les éléments vecteurs de la
-carte sont obetenus à l'aide du protocol WFS du standard OGC, à l'aide de
-MapServer connecté à une base de données PostGIS qui contient les données des
-zones et des points.
+JavaScript. La carte de fond a été crée à l'aide de MapServer Basemaps et
+Imposm avec les données gratuites d'OpenStreetMap et est publiée à l'aide
+d'un serveur MapCache utilisant le protocole TMS du standard de l'OGC. Les
+éléments vecteurs de la carte sont obetenus à l'aide du protocol WFS du
+standard OGC, à l'aide de MapServer connecté à une base de données PostGIS
+qui contient les données des zones et des points.
 
 Le démo lui-même contient un bouton "About this demo", qui contient plus de
 détails techniques.
@@ -64,6 +67,7 @@ détails techniques.
 * En savoir plus à propos d'[ExtJS][extjs]
 * En savoir plus à propos de [GeoExt][geoext]
 * En savoir plus à propos d'[Imposm][imposm]
+* En savoir plus à propos de [MapCache][mapcache]
 * En savoir plus à propos de [MapServer][mapserver]
 * En savoir plus à propos d'[OpenLayers][openlayers]
 * En savoir plus à propos d'[OpenStreetMap][openstreetmap]
