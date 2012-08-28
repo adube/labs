@@ -1,0 +1,51 @@
+---
+id: investissementquebecsante
+title: Quebec Health Sector investments
+description: >
+    Quebec Health Sector annual budget, dept service and other sectors
+created: !!timestamp '2012-08-21 08:48:00'
+tags:
+    - d3
+    - jquery
+    - leaflet
+    - mapcache
+    - quebec_opendata
+live: http://investissementsquebecsante.org/
+preview: investissementsquebecsante-preview.jpg
+thumbnail: investissementsquebecsante-thumb.jpg
+---
+
+[d3]: {{links.d3}}
+[jquery]: {{links.jquery}}
+[leaflet]: {{links.leaflet}}
+[mapcache]: {{links.mapcache}}
+[quebec_opendata]: {{links.quebec_opendata}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Quebec Health Sector annual budget, dept service and other sectors
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+A webmapping application made by the Mapgears Quebec team.
+
+The webmapping engine used is Leaflet. The application also uses jQuery and D3
+for HTML manipulation and for the various animations purposes.
+
+The base map is published by a MapCache service using the OGC TMS protocol. The
+vector features on the map containing the investment informations come from the
+Open Data of the Quebec Government.
+
+For more details, see the on-line application.
+
+* See the live [Application][live] in action.
+* Learn more about [D3][d3]
+* Learn more about [jQuery][jquery]
+* Learn more about [Open Data of Quebec Government] [quebec_opendata]
+* Learn more about [Leaflet][leaflet]
+* Learn more about [MapCache][mapcache]

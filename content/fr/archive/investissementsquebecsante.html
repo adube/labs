@@ -1,0 +1,56 @@
+---
+id: investissementquebecsante
+title: Investissements du Québec en Santé
+description: >
+    Budget annuel du Québec pour la santé, le service de la dette et les autres
+    postes budgétaires
+created: !!timestamp '2012-08-21 08:48:00'
+tags:
+    - d3
+    - jquery
+    - leaflet
+    - mapcache
+    - quebec_opendata
+live: http://investissementsquebecsante.org/
+preview: investissementsquebecsante-preview.jpg
+thumbnail: investissementsquebecsante-thumb.jpg
+---
+
+[d3]: {{links.d3}}
+[jquery]: {{links.jquery}}
+[leaflet]: {{links.leaflet}}
+[mapcache]: {{links.mapcache}}
+[quebec_opendata]: {{links.quebec_opendata}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Budget annuel du Québec pour la santé, le service de la dette et les autres
+postes budgétaires
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+Une application cartographique Web de conçu et réalisé par l'équipe Mapgears
+Québec.
+
+L'engin de cartographie Web utilisé est Leaflet. L'application utilise
+également jQuery et D3 pour la manipulation du HTML et pour les animations
+diverses.
+
+La carte de fond est publié par un serveur MapCache à l'aide du protocole TMS
+du standard OGC. Les points contenant l'information d'investissements du Québec
+en Santé proviennent des Données Ouvertes du Gouvernement du Québec.
+
+Pour plus de détails, voir l'application en-ligne.
+
+* Voir le [Démo en action][live]
+* En savoir plus à propos de [D3][d3]
+* En savoir plus à propos des [Données Ouvertes du Gouvernement du Québec]
+  [quebec_opendata]
+* En savoir plus à propos de [jQuery][jquery]
+* En savoir plus à propos de [Leaflet][leaflet]
+* En savoir plus à propos de [MapCache][mapcache]

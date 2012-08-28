@@ -43,9 +43,13 @@
   macros.j2]
 !!python/unicode 'en/archive/pim.html': [blog.j2, blog_navigation.j2, sidebar.j2,
   analytics.j2, base.j2, macros.j2]
+!!python/unicode 'en/archive/quebec-health-sector-investments.html': [blog.j2, blog_navigation.j2,
+  sidebar.j2, analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/staff-tracking.html': [blog.j2, blog_navigation.j2, sidebar.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/basemaps.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
+!!python/unicode 'en/archive/tags/d3.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/extjs.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
@@ -55,14 +59,24 @@
   base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/imposm.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'en/archive/tags/jquery.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
+!!python/unicode 'en/archive/tags/leaflet.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
+!!python/unicode 'en/archive/tags/mapcache.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/mapserver.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'en/archive/tags/opendata_gouv_qc.html': [sidebar.j2, tagged_posts.j2,
+  analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/openlayers.html': [sidebar.j2, tagged_posts.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/openstreetmap.html': [sidebar.j2, tagged_posts.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/postgis.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'en/archive/tags/quebec_opendata.html': [sidebar.j2, tagged_posts.j2,
+  analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/tinyows.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
 !!python/unicode 'en/archive/tags/yuicompressor.html': [sidebar.j2, tagged_posts.j2,
@@ -78,6 +92,8 @@
 !!python/unicode 'fr/archive/excerpts.xml': [atom.j2, macros.j2]
 !!python/unicode 'fr/archive/index.html': [listing.j2, sidebar.j2, analytics.j2, base.j2,
   macros.j2]
+!!python/unicode 'fr/archive/investissementsquebecsante.html': [blog.j2, blog_navigation.j2,
+  sidebar.j2, analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/pim.html': [blog.j2, blog_navigation.j2, sidebar.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/staff-tracking.html': [blog.j2, blog_navigation.j2, sidebar.j2,
@@ -88,6 +104,8 @@
   sidebar.j2, analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/basemaps.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'fr/archive/tags/d3.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/extjs.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/geoext.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
@@ -96,14 +114,24 @@
   base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/imposm.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'fr/archive/tags/jquery.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
+!!python/unicode 'fr/archive/tags/leaflet.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
+!!python/unicode 'fr/archive/tags/mapcache.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
+  base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/mapserver.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'fr/archive/tags/opendata_gouv_qc.html': [sidebar.j2, tagged_posts.j2,
+  analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/openlayers.html': [sidebar.j2, tagged_posts.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/openstreetmap.html': [sidebar.j2, tagged_posts.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/postgis.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
+!!python/unicode 'fr/archive/tags/quebec_opendata.html': [sidebar.j2, tagged_posts.j2,
+  analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/tinyows.html': [sidebar.j2, tagged_posts.j2, analytics.j2,
   base.j2, macros.j2]
 !!python/unicode 'fr/archive/tags/yuicompressor.html': [sidebar.j2, tagged_posts.j2,
