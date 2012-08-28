@@ -115,9 +115,11 @@ References
 * [Mapgears labs website] [4]
 * [Hyde Github Repository] [1]
 * [Hyde 0.8 official documentation] [2]
+* [Hyde Google Groups Forum] [5]
 * [Steve Losh article - moving from django to hyde] [3]
 
 [1]: https://github.com/hyde/hyde/                                 "Hyde Github repository"
 [2]: http://hyde.github.com/index.html                             "Hyde 0.8 official documentation"
 [3]: http://stevelosh.com/blog/2010/01/moving-from-django-to-hyde/ "Steve Losh article about Hyde"
 [4]: http://labs.mapgears.com                                      "Official website using this source"
+[5]: https://groups.google.com/forum/#!forum/hyde-dev              "Hyde-dev Google Groups"
