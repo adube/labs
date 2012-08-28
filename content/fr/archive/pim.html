@@ -1,0 +1,44 @@
+---
+title: PIM
+description: >
+    Obtenez de l'information d'éléments sur la carte en groupe
+created: !!timestamp '2009-11-17 15:00:00'
+tags:
+    - mapserver
+    - openlayers
+    - openstreetmap
+live: http://dev4.mapgears.com/ebdata/demo-pim/
+preview: pim-preview.jpg
+thumbnail: pim-thumb.jpg
+---
+
+[mapserver]:     {{links.mapserver}}
+[openlayers]:    {{links.openlayers}}
+[openstreetmap]: {{links.openstreetmap}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Obtenez de l'information d'éléments sur la carte en groupe
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+Ce démo contient une carte OpenLayers dans laquelle des points vecteurs
+provenant d'un serveur distant sont affichés et groupés s'ils sont proches
+les uns des autres. Un clique sur l'un d'eux affiche une fenêtre dans laquelle
+sont agrégées les informations des points groupés. S'il s'agissait d'un point
+dans laquelle il n'y en avait qu'un seul, alors l'information détaillée est
+affichée.
+
+La carte de fond provient directement des serveurs d'OpenStreetMap. Les
+éléments sont obtenus à l'aide du protocol WFS de la norme OGC, à partir d'un
+serveur MapServer.
+
+* Voir le [Démo en action][live]
+* En savoir plus à propos de [MapServer][mapserver]
+* En savoir plus à propos d'[OpenLayers][openlayers]
+* En savoir plus à propos d'[OpenStreetMap][openstreetmap]

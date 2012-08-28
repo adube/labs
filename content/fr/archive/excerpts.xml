@@ -1,0 +1,6 @@
+===
+title: Mapgears demos - excerpts
+extends: atom.j2
+excerpts_only: true
+listable: false
+===

@@ -1,0 +1,40 @@
+---
+id: weather-sites
+title: Weather Sites
+description: >
+    Quickly vizualize weather information by specific sites
+created: !!timestamp '2010-09-24 15:00:00'
+tags:
+    - openlayers
+    - tinyows
+    - yuicompressor
+live: http://labs.mapgears.com/weather-sites/
+preview: weather-sites-preview.jpg
+thumbnail: weather-sites-thumb.jpg
+---
+
+[openlayers]:    {{links.openlayers}}
+[tinyows]:       {{links.tinyows}}
+[yuicompressor]: {{links.yuicompressor}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Quickly vizualize weather information by specific sites
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+This demo features an OpenLayers map showing vector features coming from a
+remote TinyOWS server. Only a portion of the features is fetched depending on
+the zoom level currently on. Also, the label text and color displayed is
+controlled by a custom switcher on the right. The javascript code was
+minimized using the YUI Compressor tool.
+
+* See the [Live demo][live] in action
+* Learn more about [TinyOWS][tinyows]
+* Learn more about [OpenLayers][openlayers]
+* Learn more about [YUI Compressor][yuicompressor]

@@ -1,0 +1,47 @@
+---
+id: weather-sites
+title: Stations météorologiques
+description: >
+    Visualisez rapidement de l'information météo à partir de stations
+    spécifiques
+created: !!timestamp '2010-09-24 15:00:00'
+tags:
+    - openlayers
+    - tinyows
+    - yuicompressor
+live: http://labs.mapgears.com/weather-sites/
+preview: weather-sites-preview.jpg
+thumbnail: weather-sites-thumb.jpg
+---
+
+[openlayers]:    {{links.openlayers}}
+[tinyows]:       {{links.tinyows}}
+[yuicompressor]: {{links.yuicompressor}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Visualisez rapidement de l'information météo à partir de stations spécifiques
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+Ce démo contient une carte OpenLayers dans laquelle sont inclus des points
+vecteurs provenant d'un serveur TinyOWS distant. Seulement une partie des points
+sont retournés par la requête pour les obtenir en fonction du niveau de zoom
+de la carte. Aussi, le libellé affiché ainsi que la couleur du point dépend
+d'un contrôle de sélection personnalisé à droite.
+
+Les points représentent des stations météorologiques et contiennent de
+l'information telle que la température, la pression, vitesse du vent, etc. Les
+données affichées sont fictives et statiques.
+
+Le code JavaScript a été compressé à l'aide de l'outil YUI Compressor.
+
+* Voir le [Démo en action][live]
+* En savoir plus à propos de [TinyOWS][tinyows]
+* En savoir plus à propos d'[OpenLayers][openlayers]
+* En savoir plus à propos de [YUI Compressor][yuicompressor]

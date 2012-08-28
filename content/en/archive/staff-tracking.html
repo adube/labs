@@ -1,0 +1,64 @@
+---
+id: staff-tracking
+title: Staff Tracking
+description: >
+    Monitor outdoor events staff using an interactive webmapping application
+created: !!timestamp '2012-08-20 10:00:00'
+tags:
+    - basemaps
+    - extjs
+    - geoext
+    - imposm
+    - mapserver
+    - openlayers
+    - openstreetmap
+    - postgis
+live: http://labs.mapgears.com/staff-tracking/
+preview: staff-tracking-preview.jpg
+thumbnail: staff-tracking-thumb.jpg
+---
+
+[basemaps]:      {{links.basemaps}}
+[extjs]:         {{links.extjs}}
+[geoext]:        {{links.geoext}}
+[imposm]:        {{links.imposm}}
+[mapserver]:     {{links.mapserver}}
+[openlayers]:    {{links.openlayers}}
+[openstreetmap]: {{links.openstreetmap}}
+[postgis]:       {{links.postgis}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Monitor outdoor events staff using an interactive webmapping application
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+This webmapping application was built and used to monitor staff of outdoor
+events, such as concerts and shows, on an interactive map. It was designed to
+be used in a standard browser and tablets.
+
+Zones and staff icons are displayed on the map and refreshed every 15 seconds,
+mimicking what it could look like when used during a real event.
+
+The client-side application uses OpenLayers, GeoExt and ExtJS as JavaScript
+frameworks. The base maps was created using MapServer Basemaps and Imposm using
+OpenStreetMap data. The features are obtained using the OGC WFS protocol, with
+MapServer and come from a PostGIS database. 
+
+The demo itself contains a "About this demo" button, which contains more
+information and technical details.
+
+* See the [Live demo][live] in action
+* Learn more about [Basemaps][basemaps]
+* Learn more about [ExtJS][extjs]
+* Learn more about [GeoExt][geoext]
+* Learn more about [Imposm][imposm]
+* Learn more about [MapServer][mapserver]
+* Learn more about [OpenLayers][openlayers]
+* Learn more about [OpenStreetMap][openstreetmap]
+* Learn more about [PostGIS][postgis]

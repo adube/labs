@@ -1,0 +1,50 @@
+{% extends "base.j2" %}
+
+{% block main -%}
+<article class="post">
+
+{### NAVIGATION ###}
+{% block blog_navigation %}
+{% include "blog_navigation.j2" %}
+{% endblock blog_navigation %}
+
+{### TAGS ###}
+{% if resource.meta.tags %}
+<div class='post-tags'>
+{% for tag in resource.meta.tags %}
+    <a class="small"
+       href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}">{{ tag }}</a>
+{% endfor %}
+</div>
+{% endif %}
+
+{### TITLE ###}
+<h1 class="blog-title">
+    <a href="{{ content_url(resource.url) }}">
+        {{ resource.meta.title }}
+    </a>
+</h1>
+<time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
+    {{ resource.meta.i18n.posted }}:
+    {{ resource.meta.created.strftime('%a, %d %b %Y') }}
+</time>
+
+{### POST-CONTENT ###}
+<div class="post-content">
+{% filter markdown|typogrify -%}
+{% mark post -%}
+{% block post -%}{%- endblock %}
+{%- endmark %}
+{%- endfilter %}
+</div>
+
+{### NAVIGATION, again ###}
+{% block blog_navigation_bottom %}
+{% include "blog_navigation.j2" %}
+{% endblock blog_navigation_bottom %}
+
+</article>
+
+
+
+{%- endblock %}

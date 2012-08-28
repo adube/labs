@@ -1,0 +1,28 @@
+extends: base.j2
+default_block: article
+
+language: fr
+menu:
+    -
+        name: Accueil
+        description: Page d'accueil
+        css_class: home
+        type: page
+        url: fr
+    -
+        name: Archive
+        description: Page des archives
+        css_class: blog
+        type: node
+        url: fr/archive
+i18n:
+  alltags: "Onglets"
+  archive: "Archive"
+  mapgearslabs: "Mapgears labs"
+  moreaboutmapgears: "Plus à propos de Mapgears..."
+  navback: "Retour à la liste"
+  navprev: "Précédent"
+  navnext: "Suivant"
+  posted: "Publié"
+  readmore: "Lire d'avantage..."
+  socialnetworks: "Réseaux sociaux"

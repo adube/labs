@@ -1,0 +1,41 @@
+---
+title: PIM
+description: >
+    Collect information about features in clusters.
+created: !!timestamp '2009-11-17 15:00:00'
+tags:
+    - mapserver
+    - openlayers
+    - openstreetmap
+live: http://dev4.mapgears.com/ebdata/demo-pim/
+preview: pim-preview.jpg
+thumbnail: pim-thumb.jpg
+---
+
+[mapserver]:     {{links.mapserver}}
+[openlayers]:    {{links.openlayers}}
+[openstreetmap]: {{links.openstreetmap}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Collect information about features in clusters.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+This demo features an OpenLayers map showing vector features coming from a
+remote server, which are clustered on client-side when too close to each other.
+A click on a feature shows a popup with aggregated information if it contains
+clusters, or a complete detail if it only contains one.
+
+The base maps come directly from OpenStreetMap server. The features are obtained
+using the OGC WFS protocol, with MapServer.
+
+* See the [Live demo][live] in action
+* Learn more about [MapServer][mapserver]
+* Learn more about [OpenLayers][openlayers]
+* Learn more about [OpenStreetMap][openstreetmap]

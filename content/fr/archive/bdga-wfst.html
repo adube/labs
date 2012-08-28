@@ -1,0 +1,37 @@
+---
+title: BDGA WFS-T
+description: >
+    Éditez des éléments vecteurs directements dans une carte interactive à
+    partir de votre navigateur.
+created: !!timestamp '2009-01-22 15:00:00'
+tags:
+    - openlayers
+    - tinyows
+live: http://dev4.mapgears.com/bdga/bdgaWFS-T.html
+preview: bdga-wfst-preview.jpg
+thumbnail: bdga-wfst-thumb.jpg
+---
+
+[tinyows]:    {{links.tinyows}}
+[openlayers]: {{links.openlayers}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Éditez des éléments vecteurs directements dans une carte interactive à
+partir de votre navigateur.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+Ce démo contient une carte OpenLayers avec des éléments vecteurs provenant
+d'un serveur distant qui peuvent être modifiés à partir d'outils d'édition
+et sauvegardés vers le serveur. Le protocole WFS-T de la norme OGC est utilisé
+pour les transactions de lecture et d'écriture. Le serveur utilisé est TinyOWS.
+
+* Voir le [Démo en action][live]
+* En savoir plus à propos d'[OpenLayers][openlayers]
+* En savoir plus à propos de [TinyOWS][tinyows]

@@ -1,0 +1,32 @@
+{% extends "base.j2" %}
+
+{% block main %}
+<section class="archives">
+<h1 class="tag page-title">{{ tag.name }}</h1>
+<div class="posts">
+{% set lang = resource.meta.language %}
+{% for resource in walker() -%}
+    {% if resource.meta.language == lang%}
+    <div class="post">
+        <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
+            {{ resource.meta.created.strftime('%a, %d %b %Y') }}
+        </time>
+        <span class="link"><a href="{{ content_url(resource.url) }}">{{ resource.meta.title }}</a></span>
+        {% if resource.meta.tags %}
+        <ul class="tags">
+        {% for tag in resource.meta.tags %}
+        <li>
+            <a href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}"
+               class="small-left" >{{ tag }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+    <div style="clear:left; height: 0;">&nbsp;</div>
+    {% endif %}
+{%- endfor %}
+</ul>
+<div class="clear">&nbsp;</div>
+</section>
+{% endblock %}

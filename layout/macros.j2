@@ -1,0 +1,99 @@
+{### RENDER_EXCERPT ###}
+{% macro render_excerpt(res, class=None) %}
+{% refer to res.url as post %}
+<article {{'class='~class if class }}>
+<h3><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+{# if we're inside the archive node and the resource has a thumbnail, use it #}
+<a href="{{ content_url(res.url) }}">
+  <img alt="Preview"
+  {% if node.name == 'archive' and res.meta.thumbnail %}
+       src={{ media_url('images/'~res.meta.thumbnail) }} />
+  {% else %}
+       class="force-thumbnail"
+       src={{ media_url('images/'~res.meta.preview) }} />
+  {% endif %}
+</a>
+{{ post.excerpt|markdown|typogrify }}
+{% if res.meta.tags %}
+<div class="tags">
+{% for tag in res.meta.tags %}
+    <a class="small-left" 
+       href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}">{{ tag }}</a>
+{% endfor %}
+</div>
+{% endif %}
+<time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
+    {{ res.meta.i18n.posted }}:
+    {{ res.meta.created.strftime('%a, %d %b %Y') }}
+</time>
+</article>
+{% endmacro %}
+
+{### RENDER_NAV ###}
+{% macro render_nav(menu, cls=None) -%}
+{% if menu -%}
+<nav {{'class='~cls if cls }}>
+        {% for item in menu -%}
+        {% set active = False -%}
+        {% if item.type == 'page' -%}
+            {% set active = (resource.url ==
+                site.content.resource_from_relative_path(item.url).url) -%}
+        {% else -%}
+            {% set active = (node ==
+                site.content.node_from_relative_path(item.url)) -%}
+        {%- endif %}
+        {% set classes = ['foo'] -%}
+        {% do classes.append('active') if active -%}
+        {% do classes.append(item.css_class) if item.css_class -%}
+           {% if loop.index > 1 %}
+           <span>|</span>
+           {%- endif %}
+            <a title="{{ item.description }}"
+                class="{{ classes|join(' ') }}"
+                href="{{ content_url(item.url) }}">
+                {{ item.name }}
+            </a>
+        {%- endfor %}
+        {{ render_nav_lang(resource.meta.language) }}
+</nav>
+{%- endif %}
+{%- endmacro %}
+
+{### RENDER_NAV_LANG ###}
+{% macro render_nav_lang(currentLang) -%}
+  {% for contentNode in site.content.child_nodes %}
+    {% set lang = contentNode.relative_path %}
+    {% if languages[lang] and lang != currentLang %}
+      {% set langTitle = languages[lang] %}
+      {% set langDir = site.content.node_from_relative_path(lang) %}
+      {#% set langRes = langDir.resource_from_relative_path(resource.name) %#}
+
+      <span>|</span>
+
+      {% set found = [] %}
+
+      {# look for a resource having the same name in the other lang directory,
+         at the exact same location.  If there, simply use its path #}
+      {% set langRes = site.content.resource_from_relative_path(resource.relative_path|replace(currentLang, lang, 1)) %}
+      {% if langRes %}
+        {% do found.append(langRes) %}
+      {% else %}
+        {# look for a resource having the same meta id as currently visiting
+           resource meta id  #}
+        {% for langRes in langDir.walk_resources() %}
+          {% if langRes.meta.id == resource.meta.id %}
+            {% do found.append(langRes) %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {# print the found url, else (if not found) use home url of language #}
+      {% if found|length == 1 %}
+        <a title="{{ found[0].description }}"
+           href="{{ content_url(found[0].url) }}">{{ langTitle }}</a>
+      {% else %}
+        <a href="{{ content_url(lang) }}">{{ langTitle }}</a>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{%- endmacro %}

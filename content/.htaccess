@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME}/$1.html -f
+RewriteRule ^([^/]*)/$ %{REQUEST_FILENAME}/$1.html
+
+# regular pages
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^.*$ %{REQUEST_FILENAME}.html

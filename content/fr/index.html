@@ -1,0 +1,34 @@
+---
+extends: base.j2
+default_block: main
+title: Mapgears labs
+description: Home page
+---
+
+{% from "macros.j2" import render_excerpt with context %}
+<section class="blog_excerpt">
+{% set lang = site.content.node_from_relative_path(resource.meta.language) %}
+{% set sorted = lang.walk_resources_sorted_by_time() %}
+
+<div class="start">
+  Mapgears vous invite à voir quelques unes de ses applications et démos en action!
+</div>
+
+{% if sorted -%}
+{% for item in sorted %}
+{% if loop.index <= 3 %}
+<div class="item">
+{{ render_excerpt(item, 'post') }}
+
+<a class="button white medium"
+   href="{{ content_url(item.url) }}">{{ resource.meta.i18n.readmore }}</a>
+</div>
+{%- endif %}
+{% endfor %}
+{%- endif %}
+
+<div class="end">
+  Explorez tous les articles en visitant l'<a href='{{ content_url("/"~resource.meta.language~"/archive") }}'>{{ resource.meta.i18n.archive }}</a>.
+</div>
+
+</section>

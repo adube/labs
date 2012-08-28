@@ -1,0 +1,93 @@
+<div id="sidebar">
+
+  {### TAGS ###}
+  <div class="title"><span>{{ resource.meta.i18n.alltags }}</span></div>
+  <div class="content">
+    {% for tag_name, tag in site.tagger.tags|sort %}
+      {# first, get the tag occurence in each resource for a specific lang #}
+      {% set resources = [] %}
+      {% for res in site.content.walk_resources_tagged_with(tag_name) %}
+        {% do resources.append(res) if res.node.module.name == resource.meta.language  %}
+      {% endfor %}
+      
+      {% set count = resources|length %}
+
+      {# then, output the tag(count),
+         BUG the count currently gets both en and fr resources... #}
+      <span><a href='{{ content_url("/"~resource.meta.language~"/archive/tags/"~tag_name~".html" )}}'>{{ tag.name }}({{ count }})</a></span>
+      {# we could also display the resources in each tags, if we wanted #}
+      {#
+      <ul>
+        {% for resource in tag.resources %}
+          <li><a href="{{ resource.url }}">{{resource.meta.title}}</a></li>
+        {% endfor %}
+      </ul>
+      #}
+    {% endfor %}
+  </div>
+
+  {### ARCHIVE ###}
+  <div class="title"><span>{{ resource.meta.i18n.archive }}</span></div>
+  <div class="content">
+    {# browse site content child nodes, look for 'en' or 'fr' node and start
+       looping from there #}
+      {%for contentNode in site.content.child_nodes %}
+      {% if contentNode.relative_path == resource.meta.language%}
+        {% set sorted = contentNode.walk_resources_sorted_by_time() %}
+        {% if sorted -%}
+
+        {% set active_year = 9999 %}
+
+        <ul class='archive-list'>
+        {% for item in sorted %}
+          {% set current_year = item.meta.created.strftime('%Y')|int %}
+          {% if current_year < active_year %}
+            {% if loop.index > 1 %}
+              </ul>
+            {% endif %}
+            <li>{{ current_year }}</li>
+              {% set active_year = current_year %}
+            <ul class='archive-list archive-list-sub'>
+          {% endif %}
+          <li><a href="{{ content_url(item.url) }}">{{item.meta.title}}</a></li>
+        {% endfor %}
+        </ul></ul>
+        {%- endif %}
+      {% endif %}
+      {% endfor %}
+
+
+  </div>
+
+  {### SOCIAL NETWORKS - only present in archive node AND in demo pages ###}
+  {% if node.name == 'archive' %}
+    {% if resource.meta.preview %}
+      <div class="title"><span>{{ resource.meta.i18n.socialnetworks }}</span></div>
+      <div class="content social-networks">
+        {### TWITTER SHARE ###}
+        <div id="twitter_share">
+        <a href="http://twitter.com/share"
+            class="twitter-share-button"
+            data-count="vertical"
+            data-via="{{ tweet_via }}">Tweet</a>
+            <script type="text/javascript"
+                src="http://platform.twitter.com/widgets.js"></script>
+        </div>
+
+        {### FACEBOOK LIKE ###}
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+        <div id="facebook_like_2">
+          <fb:like href="{{ content_url(resource.url) }}" send="true" layout="box_count" width="50" show_faces="true"></fb:like>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+
+</div>

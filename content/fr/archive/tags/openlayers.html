@@ -1,0 +1,10 @@
+---
+extends: false
+listable: false
+
+---
+
+{% set tag = site.tagger.tags['openlayers'] %}
+{% set source = site.content.node_from_relative_path('fr') %}
+{% set walker = source['walk_resources_tagged_with_openlayers'] %}
+{% extends "tagged_posts.j2" %}

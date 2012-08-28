@@ -1,0 +1,35 @@
+---
+title: BDGA WFS-T
+description: >
+    Edit vector features in an interactive map directly from your browser.
+created: !!timestamp '2009-01-22 15:00:00'
+tags:
+    - openlayers
+    - tinyows
+live: http://dev4.mapgears.com/bdga/bdgaWFS-T.html
+preview: bdga-wfst-preview.jpg
+thumbnail: bdga-wfst-thumb.jpg
+---
+
+[tinyows]:    {{links.tinyows}}
+[openlayers]: {{links.openlayers}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Edit vector features in an interactive map directly from your browser.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+This demo features an OpenLayers map showing vector features coming from a
+remote server that can be modified using editing tools and saved back. The
+OGC WFS-T protocol is used for the CRUD transactions. The server used is
+TinyOWS.
+
+* See the [Live demo][live] in action
+* Learn more about [OpenLayers][openlayers]
+* Learn more about [TinyOWS][tinyows]
