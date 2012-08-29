@@ -39,6 +39,8 @@
 !!python/unicode 'en/archive/bdga-wfst.html': [blog.j2, blog_navigation.j2, sidebar.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/excerpts.xml': [atom.j2, macros.j2]
+!!python/unicode 'en/archive/feature-analysis-tool.html': [blog.j2, blog_navigation.j2,
+  sidebar.j2, analytics.j2, base.j2, macros.j2]
 !!python/unicode 'en/archive/index.html': [listing.j2, sidebar.j2, analytics.j2, base.j2,
   macros.j2]
 !!python/unicode 'en/archive/pim.html': [blog.j2, blog_navigation.j2, sidebar.j2,
@@ -94,6 +96,10 @@
   macros.j2]
 !!python/unicode 'fr/archive/investissementsquebecsante.html': [blog.j2, blog_navigation.j2,
   sidebar.j2, analytics.j2, base.j2, macros.j2]
+!!python/unicode 'fr/archive/outil-analyse-de-donnees-geospatiales.html': [blog.j2,
+  blog_navigation.j2, sidebar.j2, analytics.j2, base.j2, macros.j2]
+!!python/unicode 'fr/archive/outil-analyse-de-donnes-geospatiales.html': [blog.j2,
+  blog_navigation.j2, sidebar.j2, analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/pim.html': [blog.j2, blog_navigation.j2, sidebar.j2,
   analytics.j2, base.j2, macros.j2]
 !!python/unicode 'fr/archive/staff-tracking.html': [blog.j2, blog_navigation.j2, sidebar.j2,
