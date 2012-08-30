@@ -106,8 +106,8 @@ See the README-POST.markdown file to learn how to add a new demo (post).
 
 Special thanks
 ---------------
-I'd like to thank Lakshmi Vyasarajan for his help and for all my questions 
-he kindly answered: "Thank you, Lakshmi!".
+I'd like to thank [Lakshmi Vyasarajan] [8] for his help and for all my
+questions he kindly answered: "Thank you, Lakshmi!".
 
 
 References
@@ -118,6 +118,7 @@ References
 * [Hyde Google Groups Forum] [5]
 * [Markdown syntax] [6]
 * [Jinja Template Designer Documentation] [7]
+* [Lakshmi Vyasarajan - Creator of Hyde] [8]
 * [Steve Losh article - moving from django to hyde] [3]
 
 [1]: https://github.com/hyde/hyde/                                 "Hyde Github repository"
@@ -127,3 +128,4 @@ References
 [5]: https://groups.google.com/forum/#!forum/hyde-dev              "Hyde-dev Google Groups"
 [6]: http://daringfireball.net/projects/markdown/syntax            "Markdown is a text-to-HTML conversion tool for web writers"
 [7]: http://jinja.pocoo.org/docs/templates/                        "Jinja template engine for Python"
+[8]: http://about.me/lakshmivyas                                   "Who is Lakshmi Vyasarajan?"
