@@ -20,6 +20,9 @@ context:
             mapgears: info@mapgears.com
         links:
             basemaps: https://github.com/mapserver/basemaps/
+            backbone: http://backbonejs.org/
+            backbone_boilerplate: https://github.com/tbranyen/backbone-boilerplate
+            bootstrap: http://twitter.github.com/bootstrap/
             d3: http://d3js.org/
             extjs: http://docs.sencha.com/ext-js/
             geoext: http://geoext.org/

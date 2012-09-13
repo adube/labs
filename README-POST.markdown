@@ -16,7 +16,7 @@ create a new post
 ------------------
 The easiest way is to copy an existing one an rename it :
 
-    cp en/content/archive/staff-tracking.html en/content/archive/mypost.html
+    cp content/en/archive/staff-tracking.html content/en/archive/mypost.html
 
 The part contains the page global informations, which are pretty much
 self-explanatory. Edit each line accordingly.
@@ -75,6 +75,8 @@ two ones don't need to be changed.
 
     [live]:    {{resource.meta.live}}
     [preview]: {{media_url('images/'~resource.meta.preview)}}
+
+    Note: the link cannot include the character "-".
     
 After that comes the 'excerpt' part, which is displayed as a summary text in
 the archive main page and on the main page when it's the latest post. I haven't
