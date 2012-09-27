@@ -381,6 +381,10 @@ article.post ul{
 article.post img{
 }
 
+article.post ul{
+    margin: 6px 0 6px 16px;
+}
+
 .post time{
     font-size: 12px;
     color: #666;
