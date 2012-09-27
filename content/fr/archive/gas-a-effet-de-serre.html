@@ -1,0 +1,40 @@
+---
+id: greenhouse-gas
+title: Gas à effet de serre
+description: >
+    L'application sur les Émissions de Gas à effet de serre.
+created: !!timestamp '2012-02-04 15:00:00'
+tags:
+    - leaflet
+live: http://solutionsmapgears.github.com/ghg_dataviz/gasemi.html
+preview: greenhouse-gas-preview.jpg
+thumbnail: greenhouse-gas-thumb.jpg
+---
+
+[leaflet]: {{links.leaflet}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+L'application sur les Émissions de Gas à effet de serre.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+L'application sur les Émissions de Gas à effet de serre (GES) a pour objectif
+de montrer deux choses:
+
+*   la densité des installations produisant ces GES
+*   la distribution des émissions de GES au Canada.
+
+Dans une carte, on utilise souvent la "Heatmap" pour montrer la densité
+d’une valeur quelconque sur le territoire. Par contre, nous avons voulu
+produire un effet de densité à l’aide d’un grid hexagonal.  De plus cette
+application utilise un effet particulier (fish eyes) pour permettre à
+l'utilisateur d'avoir accès à tout les points de la carte.
+
+* Voir le [Démo en action][live]
+* En savoir plus à propos de [Leaflet][leaflet]
