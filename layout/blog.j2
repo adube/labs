@@ -1,12 +1,14 @@
 {% extends "base.j2" %}
+{% from "macros.j2" import render_post_navigation with context %}
+{% set lang = resource.meta.language %}
 
 {% block main -%}
 <article class="post">
 
 {### NAVIGATION ###}
-{% block blog_navigation %}
-{% include "blog_navigation.j2" %}
-{% endblock blog_navigation %}
+{% set root = site.content.node_from_relative_path(lang~'/archive') %}
+{% set posts = root.walk_resources_sorted_by_time() %}
+{{ render_post_navigation(resource, posts) if posts }}
 
 {### TAGS ###}
 {% if resource.meta.tags %}
@@ -39,9 +41,7 @@
 </div>
 
 {### NAVIGATION, again ###}
-{% block blog_navigation_bottom %}
-{% include "blog_navigation.j2" %}
-{% endblock blog_navigation_bottom %}
+{{ render_post_navigation(resource, posts) if posts }}
 
 </article>
 

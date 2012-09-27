@@ -97,3 +97,56 @@
     {% endif %}
   {% endfor %}
 {%- endmacro %}
+
+{### 
+  Method: render_post_navigation
+  Used to render the 'back', 'previous' and 'next' anchors for a post
+  navigation.
+  Params:
+  - current {Resource} the current post page being visited
+  - posts {Resource[]} all posts (of current lang)
+ ###}
+{% macro render_post_navigation(current, posts) -%}
+  {% set prev = [] %}
+  {% set next = [] %}
+
+  {# collect previous and next pages of current post #}
+  {% for post in posts %}
+    {% if post == current %}
+      {% set prevIndex = loop.index - 2 %}
+      {% set nextIndex = loop.index %}
+
+      {% if prevIndex >= 0 and posts[prevIndex] %}
+        {% do prev.append(posts[prevIndex]) %}
+      {% endif %}
+
+      {% if posts[nextIndex] %}
+        {% do next.append(posts[nextIndex]) %}
+      {% endif %}
+
+      {# it would be nice to be able to break the loop, here... #}
+    {% endif %}
+  {% endfor %}
+
+  {# render the result #}
+  <nav class="post_nav">
+    <a class="backlink" href="{{ content_url(resource.node.url) }}">
+     {{ resource.meta.i18n.navback }}
+    </a>
+
+    <a class="prev{{' disabled' if not prev[0] }}"
+      title="{{ prev[0].meta.title }}"
+      {% if prev[0] %}href="{{ content_url(prev[0].url) }}"{% endif %}>
+      {{ resource.meta.i18n.navprev }}
+    </a>
+
+    <a class="next{{' disabled' if not next[0] }}"
+      title="{{ next[0].meta.title }}"
+      {% if next[0] %}
+      href="{{ content_url(next[0].url) }}"{% endif %}>
+      {{ resource.meta.i18n.navnext }}
+    </a>
+  </nav>
+  <div class="clear-left"></div>
+
+{%- endmacro %}
