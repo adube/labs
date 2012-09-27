@@ -4,7 +4,7 @@ listable: false
 
 ---
 
-{% set tag = site.tagger.tags['Flask'] %}
+{% set tag = site.tagger.tags['flask'] %}
 {% set source = site.content.node_from_relative_path('en') %}
-{% set walker = source['walk_resources_tagged_with_Flask'] %}
+{% set walker = source['walk_resources_tagged_with_flask'] %}
 {% extends "tagged_posts.j2" %}

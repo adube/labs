@@ -26,6 +26,7 @@ context:
             bootstrap: http://twitter.github.com/bootstrap/
             d3: http://d3js.org/
             extjs: http://docs.sencha.com/ext-js/
+            flask: http://flask.pocoo.org/
             geoext: http://geoext.org/
             gxp: https://github.com/opengeo/gxp/
             imposm: http://imposm.org/docs/imposm/latest/
