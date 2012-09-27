@@ -22,10 +22,7 @@
 {% endfor %}
 </div>
 {% endif %}
-<time datetime="{{ res.meta.created.strftime('%Y-%m-%d') }}">
-    {{ res.meta.i18n.posted }}:
-    {{ res.meta.created.strftime('%a, %d %b %Y') }}
-</time>
+{{ render_post_date(resource.meta.created) }}
 </article>
 {% endmacro %}
 
@@ -96,6 +93,30 @@
       {% endif %}
     {% endif %}
   {% endfor %}
+{%- endmacro %}
+
+{###
+  Method: render_post_date
+  Used to render date of a post inside a time tag using a given timestamp.
+  Params:
+  - timestamp (Timestamp)
+ ###}
+{% macro render_post_date(timestamp) -%}
+  <time datetime="{{ datetime(timestamp, '%Y-%m-%d') }}">
+    {{ resource.meta.i18n.posted }}:
+    {{ datetime(timestamp, '%a, %d %b %Y') }}
+  </time>
+{%- endmacro %}
+
+{### 
+  Method: render_post_shortdate
+  Used to render short date using a time tag
+  - timestamp (Timestamp)
+ ###}
+{% macro render_post_shortdate(timestamp) -%}
+  <time datetime="{{ datetime(timestamp, '%Y-%m-%d') }}">
+    {{ datetime(timestamp, '%a, %d %b %Y') }}
+  </time>
 {%- endmacro %}
 
 {### 

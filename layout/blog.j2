@@ -1,4 +1,5 @@
 {% extends "base.j2" %}
+{% from "macros.j2" import render_post_date with context %}
 {% from "macros.j2" import render_post_navigation with context %}
 {% set lang = resource.meta.language %}
 
@@ -26,10 +27,9 @@
         {{ resource.meta.title }}
     </a>
 </h1>
-<time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
-    {{ resource.meta.i18n.posted }}:
-    {{ resource.meta.created.strftime('%a, %d %b %Y') }}
-</time>
+
+{### POST TIME ###}
+{{ render_post_date(resource.meta.created) }}
 
 {### POST-CONTENT ###}
 <div class="post-content">

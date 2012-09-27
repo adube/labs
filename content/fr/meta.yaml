@@ -2,6 +2,8 @@ extends: base.j2
 default_block: article
 
 language: fr
+lc: fr_CA
+
 menu:
     -
         name: Accueil

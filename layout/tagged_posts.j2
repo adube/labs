@@ -1,4 +1,5 @@
 {% extends "base.j2" %}
+{% from "macros.j2" import render_post_shortdate with context %}
 
 {% block main %}
 <section class="archives">
@@ -8,9 +9,7 @@
 {% for resource in walker() -%}
     {% if resource.meta.language == lang%}
     <div class="post">
-        <time datetime="{{ resource.meta.created.strftime('%Y-%m-%d') }}">
-            {{ resource.meta.created.strftime('%a, %d %b %Y') }}
-        </time>
+        {{ render_post_shortdate(resource.meta.created) }}
         <span class="link"><a href="{{ content_url(resource.url) }}">{{ resource.meta.title }}</a></span>
         {% if resource.meta.tags %}
         <ul class="tags">
