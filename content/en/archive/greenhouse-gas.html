@@ -1,0 +1,37 @@
+---
+id: greenhouse-gas
+title: Greenhouse gas
+description: >
+    Greenhouse gas emission application.
+created: !!timestamp '2012-02-04 15:00:00'
+tags:
+    - leaflet
+live: http://solutionsmapgears.github.com/ghg_dataviz/gasemi.html
+preview: greenhouse-gas-preview.jpg
+thumbnail: greenhouse-gas-thumb.jpg
+---
+
+[leaflet]: {{links.leaflet}}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Greenhouse gas emission application.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+Greenhouse gas emission (GHG) application have two goals:
+*   show the density of facilities producing those GHG emissions 
+*   show the distribution of GHG emissions in Canada
+
+We usually used an “Heatmap” layers to show the density distribution.  But,
+we tried to produce this density map using a hexagonal grid.  Moreover, we
+used an "fish eyes effect" with d3js librairy (d3js.org) instead of "cluster
+effect" to get and view all points in the map.
+
+* See the [Live demo][live] in action
+* Learn more about [Leaflet][leaflet]
