@@ -69,7 +69,7 @@ a:hover{
 }
 
 body{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: verdana, "DejaVu", arial, sans-serif;
     background-color: black;
     background-image: url(/media/images/site/body-background.jpg);
     background-repeat: repeat-x;
@@ -373,12 +373,14 @@ section.content .end {
 
 article.post p,
 article.post ul{
-    font-size: 12px;
-    line-height: 24px;
-    margin: 6px 0;
+    color: #222;
+    font-size: 10.5pt;
+    line-height: 14pt;
+    margin: 0 0 15px 0;
 }
 
 article.post img{
+    margin: 0 0 15px 0;
 }
 
 article.post ul{
@@ -560,6 +562,10 @@ a.backlink:hover, a.prev:hover, a.next:hover{
     clear: left;
     padding: 0 0 10px 0;
     margin: 30px 0 0 0;
+}
+
+article.post .post-content img{
+    margin: 0;
 }
 
 /****************************
