@@ -30,6 +30,7 @@ You'll also need a web server.  I used apache2 in which I enabled the following
 modules :
 
 * libapache2-mod-php5
+* mod_expires
 * mod_rewrite
 * mod_headers enabled
 
