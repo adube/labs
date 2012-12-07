@@ -18,7 +18,7 @@ menu:
         type: node
         url: fr/archive
 i18n:
-  alltags: "Onglets"
+  alltags: "Mots-clés"
   archive: "Archive"
   mapgearslabs: "Mapgears labs"
   moreaboutmapgears: "Plus à propos de Mapgears..."
