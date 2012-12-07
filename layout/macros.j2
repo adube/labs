@@ -20,6 +20,7 @@
     <a class="small-left" 
        href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}">{{ tag }}</a>
 {% endfor %}
+<div style="clear:left;"></div>
 </div>
 {% endif %}
 {{ render_post_date(res.meta.created) }}
