@@ -692,8 +692,10 @@ footer .content a:hover {
     color: #5A931E;
 }
 
-/* sidebar */
-#sidebar {
+/**
+ * sidebar
+ */
+.sidebar {
     background-image: url(/media/images/site/main-background.jpg);
     background-repeat: repeat-x;
     float: right;
@@ -701,36 +703,48 @@ footer .content a:hover {
     width: 200px;
 }
 
-#sidebar .title {
+.sidebar .sidebar-title {
     background-image: url("/media/images/site/topbar-background.png");
     background-repeat: repeat-x;
     color: white;
-    font: 16px/18px 'EnigmaticRegular', 'Trebuchet MS', Arial, sans-serif;
+    font: 18px/18px 'EnigmaticRegular', 'Trebuchet MS', Arial, sans-serif;
     margin: 15px 0 0 0;
     padding: 5px 0 3px 7px;
     position: relative;
     text-align: left;
 }
 
-#sidebar .content {
-    font-size: 9pt;
+.sidebar .sidebar-content {
+    font-size: 9.5pt;
+    margin: 0 0 15px 0;
     padding: 4px 4px 0 4px;
 }
 
-#sidebar .content span {
+.sidebar .sidebar-content span {
     line-height: 1.4;
     margin: 0 5px 0 0;
 }
 
-#sidebar ul.archive-list {
+.sidebar ul.archive-list {
+    border: 0;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-#sidebar ul.archive-list-sub {
-    margin: 0 0 5px 5px;
+.sidebar ul.archive-list-sub {
+    margin: 0 0 5px 7px;
 }
 
-#sidebar .social-networks div {
+.sidebar ul.archive-list-sub li {
+    list-style: initial;
+    list-style-type: circle;
+    margin: 0 0 3px 10px;
+    padding: 0 0 0 5px;
+    text-indent: -10px;
+}
+
+.sidebar .social-networks div {
     float: left;
     margin: 0 5px 0 0;
 }

@@ -1,8 +1,8 @@
-<div id="sidebar">
+<div class="sidebar">
 
   {### TAGS ###}
-  <div class="title"><span>{{ resource.meta.i18n.alltags }}</span></div>
-  <div class="content">
+  <div class="sidebar-title"><span>{{ resource.meta.i18n.alltags }}</span></div>
+  <div class="sidebar-content">
     {% for tag_name, tag in site.tagger.tags|sort %}
       {# first, get the tag occurence in each resource for a specific lang #}
       {% set resources = [] %}
@@ -27,8 +27,8 @@
   </div>
 
   {### ARCHIVE ###}
-  <div class="title"><span>{{ resource.meta.i18n.archive }}</span></div>
-  <div class="content">
+  <div class="sidebar-title"><span>{{ resource.meta.i18n.archive }}</span></div>
+  <div class="sidebar-content">
     {# browse site content child nodes, look for 'en' or 'fr' node and start
        looping from there #}
       {%for contentNode in site.content.child_nodes %}
@@ -62,8 +62,8 @@
   {### SOCIAL NETWORKS - only present in archive node AND in demo pages ###}
   {% if node.name == 'archive' %}
     {% if resource.meta.preview %}
-      <div class="title"><span>{{ resource.meta.i18n.socialnetworks }}</span></div>
-      <div class="content social-networks">
+      <div class="sidebar-title"><span>{{ resource.meta.i18n.socialnetworks }}</span></div>
+      <div class="sidebar-content social-networks">
         {### TWITTER SHARE ###}
         <div id="twitter_share">
         <a href="http://twitter.com/share"
