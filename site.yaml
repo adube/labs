@@ -37,6 +37,7 @@ context:
             mapserver: http://mapserver.org/
             openlayers: http://openlayers.org/
             openstreetmap: http://www.openstreetmap.org/
+            pgrouting: http://pgrouting.org/
             postgis: http://postgis.refractions.net/
             quebec_opendata: http://www.ouvert.gouv.qc.ca/
             tinyows: http://www.tinyows.org/

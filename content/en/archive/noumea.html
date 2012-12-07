@@ -1,0 +1,154 @@
+---
+id: noumea
+title: Map - Noumea City
+description:
+    The web mapping application mockup that Mapgears and her partners
+    SiGéO and SCSI proposed to the Noumea city, New Caledonia.
+created: !!timestamp '2012-12-07 08:00:00'
+tags:
+    - extjs
+    - geoext
+    - mapcache
+    - mapfishprint
+    - mapserver
+    - openlayers
+    - pgrouting
+    - tinyows
+live: http://noumea.mapgears.com/
+preview: noumea-preview.jpg
+thumbnail: noumea-thumb.jpg
+---
+
+{# jinja variables  #}
+{% set img_search = media_url('images/noumea-screenshot-searchtools.jpg') %}
+{% set img_circle = media_url('images/noumea-screenshot-searchcircle.jpg') %}
+{% set img_result = media_url('images/noumea-screenshot-searchcircleresults.jpg') %}
+{% set img_detour = media_url('images/noumea-screenshot-routing-detour.jpg') %}
+
+{# markdown links #}
+[extjs]:      {{links.extjs}}
+[geoext]:     {{links.geoext}}
+[mapcache]:   {{links.mapcache}}
+[mapfishprint]: {{links.mapfishprint}}
+[mapserver]:  {{links.mapserver}}
+[openlayers]: {{links.openlayers}}
+[pgrouting]:  {{links.pgrouting}}
+[tinyows]:    {{links.tinyows}}
+
+[video]: http://www.mapgears.com/
+[svg]: http://mapserver.org/output/svg.html
+[blog_smercier]: http://simonmercier.net/blog/?p=1214
+[sigeo]: http://sigeo.lagoon.nc/
+[scsi]: http://www.scsi.nc/
+[mapgears]: {{ links.mapgears }}
+[img_search]: {{ img_search }}
+[img_circle]: {{ img_circle }}
+[img_result]: {{ img_result }}
+[img_detour]: {{ img_detour }}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+The web mapping application mockup that Mapgears and her partners
+SiGéO and SCSI proposed to the Noumea city, New Caledonia.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+## The original requirement
+
+During autumn 2012, the Noumea city located in New Caledonia was in process of
+updating their website to give it a fresh new look. At the same time, they
+wanted to have a web mapping application to publish their geospatial data
+to general public.
+
+[Mapgears][mapgears] was asked to produce a mockup for this application in
+partnership with [SiGéO][sigeo] and [SCSI][scsi], local companies from
+New Caledonia.
+
+## Technologies used
+
+The application is built entirely with open source technologies. The web
+part is based on OpenLayers as its geographic core component in addition to
+GeoExt and ExtJS to add more rich tools such as the opacity and zoom sliders.
+
+On the server part, MapServer is used to render the maps in addition
+to drawing the legend. The maps gets cached by MapCache for
+performance improvement. A vector layer used to display road works in
+progress is served by TinyOWS in editing mode using the WFS-T protocol
+from OGC. The routing tool uses pgRouting to calculate directions
+using the original road network data from Noumea in addition to
+avoiding road works when possible. Finally, the MapFish Print module allows
+exporting the map as a PDF document.
+
+The end result is very impressing!
+
+## Some particularly interesting tools
+
+Here's some more details regarding some tools that are particularly
+interesting.
+
+### Points of interest browsing and searching
+
+The city's points of interest browsing method is very intuitive. They
+are organized in categories that are accessibles using buttons with
+drop down menus in the toolbar located on the top of the map. In a few
+clicks, we get a filtered result depending of what type of location
+was chosen. A click on a returned record recenters the map to its
+location, which is also highlighted, and a popup displays more
+information about it.
+
+![Points of interest browsing and searching][img_search]
+
+One more way to get the information is using the search text box on top
+of the application. The results returned are displayed the same way as
+previously explained, with the exception of this type of request searching all
+available data instead of just one at a time.
+
+One last geospatial search tool, which is available from the top right part
+of the interface, allows to get a list of points of interests in a radius in
+meters, which length is determined by the position of the slider, from the
+center of the map. Again, same kind of result.
+
+![Search by radius][img_circle]
+
+![Search by radius - results][img_result]
+
+### Routing
+
+Once the tool gets activated, a first click in the map sets the starting
+location and the second one the ending location. The shortest route is 
+computed and rendered on the map. One interesting thing to point out is
+the fact that the tool takes the presence of road works into account and
+includes them in its calculations. In the below example, the
+<i>du Paster Maurice LEENHARDT</i> road is under repair as indicated by the
+marker's presence. So, the tool considers that taking a detour to avoid the
+street repairs is a better route.
+
+![Routing and detour][img_detour]
+
+### MapServer tricks
+
+The map rendering is beautiful, mostly because of the color gradient effect
+and the SVG symbology. Simon Mercier esplains in more details the recipe to
+[Produce a color gradient effect with MapServer][blog_smercier] in his blog,
+in French. The [SVG Symbology][svg] is supported since MapServer 6.2 and
+greatly enhance the quality of the map symbols.
+
+## See the application in action
+
+You can [see the application in action][live] and get a feeling of its high
+professionalism level. You can also [watch this video][video] that explains
+in depth its various functionalities and cool features.
+
+Both the application and the video are in French.
+
+## References
+
+To know more about the technologies used in this application, visit
+their web site: [ExtJS][extjs], [GeoExt][geoext],
+[OpenLayers][openlayers], [MapServer][mapserver],
+[MapCache][mapcache], [pgRouting][pgrouting] and [TinyOWS][tinyows].

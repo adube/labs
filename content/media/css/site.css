@@ -564,8 +564,31 @@ a.backlink:hover, a.prev:hover, a.next:hover{
     margin: 30px 0 0 0;
 }
 
-article.post .post-content img{
+article.post .post-content a img,
+article.post .post-content p img{
     margin: 0;
+}
+
+
+
+
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin: 0 0 15px 0;
+}
+
+.post-content h2 {
+    color: #5A931E;
+    font-size: 12pt;
+}
+
+.post-content h3 {
+/*    color: #1E5B94;*/
+    color: #941E5B;
+    font-size: 10.5pt;
 }
 
 /****************************
