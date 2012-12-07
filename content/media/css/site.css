@@ -333,6 +333,7 @@ section.content .end {
     background-color: #ededed;
     list-style-type: none;
     float: left;
+    height: 250px;
     width: 272px;
     margin-right: 24px;
     margin-bottom: 24px;
@@ -359,7 +360,7 @@ section.content .end {
 }
 
 .listing li .tags{
-    margin: 0 0 6px 0;
+    margin: 2px 0 6px 0;
 }
 
 
@@ -373,8 +374,16 @@ section.content .end {
 .listing time{
     display:block;
     border-top: 1px solid #ccc;
+    margin: 8px 0 0 0;
     padding-top: 4px;
     font-size: 10px;
+}
+
+.listing .small-left {
+    display: block;
+    float: left;
+    font-size: 8pt;
+    line-height: 10pt;
 }
 
 /* Content */
