@@ -33,6 +33,7 @@ context:
             jquery: http://jquery.com/
             leaflet: http://leaflet.cloudmade.com/
             mapcache: http://mapserver.org/trunk/mapcache/
+            mapfishprint: http://www.mapfish.org/doc/print/
             mapgears: http://www.mapgears.com/
             mapserver: http://mapserver.org/
             openlayers: http://openlayers.org/
