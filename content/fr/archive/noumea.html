@@ -5,7 +5,7 @@ description:
     La maquette d'application de cartographie Web que Mapgears et ses
     partenaires SiGéO et SCSI ont proposé à la ville de Nouméa,
     Nouvelle-Calédonie.
-created: !!timestamp '2012-12-07 08:00:00'
+created: !!timestamp '2012-12-12 12:00:00'
 tags:
     - extjs
     - geoext
@@ -25,6 +25,8 @@ thumbnail: noumea-thumb.jpg
 {% set img_circle = media_url('images/noumea-screenshot-searchcircle.jpg') %}
 {% set img_result = media_url('images/noumea-screenshot-searchcircleresults.jpg') %}
 {% set img_detour = media_url('images/noumea-screenshot-routing-detour.jpg') %}
+{% set img_video  = media_url('images/noumea-video.jpg') %}
+{% set url_video  = "http://youtu.be/LY2098-0xgU" %}
 
 {# markdown links #}
 [extjs]:      {{links.extjs}}
@@ -36,7 +38,7 @@ thumbnail: noumea-thumb.jpg
 [pgrouting]:  {{links.pgrouting}}
 [tinyows]:    {{links.tinyows}}
 
-[video]: http://www.mapgears.com/
+[video]: {{ url_video }}
 [svg]: http://mapserver.org/output/svg.html
 [blog_smercier]: http://simonmercier.net/blog/?p=1214
 [sigeo]: http://sigeo.lagoon.nc/
@@ -46,6 +48,7 @@ thumbnail: noumea-thumb.jpg
 [img_circle]: {{ img_circle }}
 [img_result]: {{ img_result }}
 [img_detour]: {{ img_detour }}
+[img_video]: {{ img_video }}
 
 [live]:    {{resource.meta.live}}
 [preview]: {{media_url('images/'~resource.meta.preview)}}
@@ -144,6 +147,12 @@ Vous pouvez [voir l'application en action][live] et avoir un <i>feeling</i>
 de son niveau de professionalisme. Vous pouvez également [regarder
 cette vidéo][video] qui explique en large ses fonctionnalités et
 comment s'en servir.
+
+<p><a href="{{ url_video }}">
+  <img src="{{ img_video }}"
+       alt="Vidéo" 
+       title="Visionner le vidéo expliquant l'application" />
+</a></p>
 
 ## Références
 
