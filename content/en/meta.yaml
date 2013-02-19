@@ -18,7 +18,7 @@ menu:
         type: node
         url: en/archive
     -
-        name: Feed
+        name: Atom Feed
         description: Subscribe to the Atom feed
         css_class: feed
         type: page

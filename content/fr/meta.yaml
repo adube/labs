@@ -18,7 +18,7 @@ menu:
         type: node
         url: fr/archive
     -
-        name: Flux
+        name: Flux Atom
         description: S'abonner au flux
         css_class: feed
         type: page
