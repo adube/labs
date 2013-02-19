@@ -172,3 +172,21 @@
   <div class="clear-left"></div>
 
 {%- endmacro %}
+
+
+{### 
+  Method: full_content_url
+  Returns the full url of an inner link, including the host.
+  Note: use with trim to get rid of the spaces, as such:
+    full_content_url('url')|trim
+ ###}
+{% macro full_content_url(url) -%}
+  {% set host_url = links.mapgearslabs %}
+  {% set link_url = content_url(url) %}
+  {% if link_url|wordwrap(1)|first == '/' and host_url|wordwrap(1)|last == '/'%}
+    {% set full_url = (host_url ~ link_url|replace('/', '', 1)) %}
+  {% else %}
+    {% set full_url = (host_url ~ link_url) %}
+  {% endif %}
+  {{ full_url }}
+{%- endmacro %}

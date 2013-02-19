@@ -35,6 +35,7 @@ context:
             mapcache: http://mapserver.org/trunk/mapcache/
             mapfishprint: http://www.mapfish.org/doc/print/
             mapgears: http://www.mapgears.com/
+            mapgearslabs: http://labs.mapgears.com/
             mapserver: http://mapserver.org/
             openlayers: http://openlayers.org/
             openstreetmap: http://www.openstreetmap.org/
