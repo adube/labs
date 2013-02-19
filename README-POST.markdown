@@ -26,6 +26,7 @@ self-explanatory. Edit each line accordingly.
   the generator to connect both pages and automatically create the link to the
   other page accordingly. If both page names are the same, you don't need to
   use an id.
+* author: (recommended, string) The author of the article
 * created: (mandatory, timestamp string) The creation timestamp of the post.
   Used by the time sorter.
 * description: (mandatory, string) Description of the post
@@ -45,6 +46,7 @@ Here's an example :
     title: Staff Tracking
     description: >
         Monitor outdoor events staff using an interactive webmapping application
+    author: Alexandre Dubé
     created: !!timestamp '2012-08-20 10:00:00'
     tags:
         - basemaps

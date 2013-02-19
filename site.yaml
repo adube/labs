@@ -48,7 +48,7 @@ context:
 meta:
     nodemeta: meta.yaml
     created: !!timestamp 2012-08-02 14:04:01
-    author: Alexandre Dube
+    author: Mapgears
     encoding: utf-8
     lc: en_US
 sorter:
