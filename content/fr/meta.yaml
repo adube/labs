@@ -17,6 +17,13 @@ menu:
         css_class: blog
         type: node
         url: fr/archive
+    -
+        name: Flux
+        description: S'abonner au flux
+        css_class: feed
+        type: page
+        url: fr/archive/atom.xml
+
 i18n:
   alltags: "Mots-clés"
   archive: "Archive"

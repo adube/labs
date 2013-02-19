@@ -17,9 +17,17 @@ menu:
         css_class: blog
         type: node
         url: en/archive
+    -
+        name: Feed
+        description: Subscribe to the Atom feed
+        css_class: feed
+        type: page
+        url: en/archive/atom.xml
+
 i18n:
   alltags: "All tags"
   archive: "Archive"
+  feed: "Feed"
   moreaboutmapgears: "More about Mapgears..."
   mapgearslabs: "Mapgears labs"
   navback: "Back to list"
