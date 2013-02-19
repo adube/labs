@@ -19,6 +19,7 @@ context:
             en: English
         emails:
             mapgears: info@mapgears.com
+        deploy_host: http://labs.mapgears.com/
         links:
             basemaps: https://github.com/mapserver/basemaps/
             backbone: http://backbonejs.org/

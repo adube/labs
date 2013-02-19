@@ -1,5 +1,6 @@
 {% from "macros.j2" import render_excerpt, render_post with context %}
 {% from "macros.j2" import full_content_url with context %}
+{% from "macros.j2" import render_feed_content with context %}
 {% set lang = resource.meta.language %}
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -32,7 +33,7 @@
             {% for tag in res.meta.tags %}<category
                 scheme="{{ full_content_url('/'~lang~'/archive/tags/'~tag~'.html')|trim }}" 
                 term="{{tag}}"
-                label="{{ tag|title }}"
+                label="{{tag}}"
             />
             {% endfor %}
 
@@ -43,7 +44,7 @@
                 {{ article.image|markdown|typogrify }}
                 {{ article.excerpt|markdown|typogrify }}
                 {%- else %}
-                {{ article.post|markdown|typogrify }}
+                {{ render_feed_content(article)|trim }}
                 {%- endif %}
                 {%- endfilter %}
             </content>

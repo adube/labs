@@ -181,7 +181,7 @@
     full_content_url('url')|trim
  ###}
 {% macro full_content_url(url) -%}
-  {% set host_url = links.mapgearslabs %}
+  {% set host_url = deploy_host %}
   {% set link_url = content_url(url) %}
   {% if link_url|wordwrap(1)|first == '/' and host_url|wordwrap(1)|last == '/'%}
     {% set full_url = (host_url ~ link_url|replace('/', '', 1)) %}
@@ -189,4 +189,16 @@
     {% set full_url = (host_url ~ link_url) %}
   {% endif %}
   {{ full_url }}
+{%- endmacro %}
+
+{### 
+  Method: render_feed_content
+  ...
+  Note: use with trim to get rid of the spaces, as such:
+    render_feed_content(article)|trim
+ ###}
+{% macro render_feed_content(article) -%}
+  {% set host = deploy_host %}
+  {% set content = article.post|markdown|typogrify %}
+  {{ content|replace('src="/', 'src="'~host)|replace("src='/", "src='"~host)|replace('href="/', 'href="'~host)|replace("href='/", "href='"~host) }}
 {%- endmacro %}
