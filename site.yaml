@@ -32,7 +32,9 @@ context:
             gxp: https://github.com/opengeo/gxp/
             imposm: http://imposm.org/docs/imposm/latest/
             jquery: http://jquery.com/
+            jqueryui: http://jqueryui.com/
             leaflet: http://leaflet.cloudmade.com/
+            lightbox2: http://lokeshdhakar.com/projects/lightbox2/
             mapcache: http://mapserver.org/trunk/mapcache/
             mapfishprint: http://www.mapfish.org/doc/print/
             mapgears: http://www.mapgears.com/
