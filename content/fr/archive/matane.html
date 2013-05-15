@@ -2,7 +2,7 @@
 id: matane
 title: Matane, Une ville attractive et animée!
 description:
-    Le démo d'application de cartographie Web de la ville de Matane.
+    Un démo d'application de cartographie Web de la ville de Matane.
 author: Marc-André Barbeau
 created: !!timestamp '2013-05-15 11:00:00'
 tags:
@@ -10,6 +10,7 @@ tags:
     - jqueryui
     - leaflet
     - lightbox
+    - openstreetmap
 
 live: http://solutionsmapgears.github.io/demo-matane/index.html
 preview: matane-preview.jpg
@@ -23,24 +24,47 @@ thumbnail: matane-thumb.jpg
 [jqueryui]: {{links.jqueryui}}
 [leaflet]:  {{links.leaflet}}
 [lightbox]: {{links.lightbox2}}
+[osm]: {{links.openstreetmap}}
+[mapbox]: http://mapbox.com/tutorial-sherlock/
 
 [live]:    {{resource.meta.live}}
 [preview]: {{media_url('images/'~resource.meta.preview)}}
 
 {% mark excerpt -%}
-Le démo d'application de cartographie Web de la ville de Matane.
+Un démo d'application de cartographie Web de la ville de Matane.
 {%- endmark %}
 
 <p><a href="{{resource.meta.live}}">
 ![Preview][preview]
 </a></p>
 
-## Titre
+## Objectif et origine du démo
 
-Paragraphe
+Ce démo a pour objectif de montrer les attraits touristiques d'une
+ville en utilisant différentes méthodes de navigation entre une carte
+[OpenStreetMap][osm] et des informations contextuelles. Nous avons adapté un
+[tutoriel de Mapbox][mapbox] pour faire ce démo avec [Leaflet][leaflet].
+
+## Fonctionnalités
+
+Plusieurs méthodes de navigation sont possibles:
+
+*   Dérouler la liste des points d'intérêts de gauche avec la souris ou le
+    clavier
+*   Cliquer sur le point d'intérêt désiré dans la liste déroulante ou sur la
+    carte
+
+Nous avons aussi ajouté un lien dans la description de la Maison
+Horace-Bouffard permettant d'afficher le trajet pour s'y rendre à
+partir du bureau d’accueil touristique de Matane. De plus, sur la page
+couverture de la liste déroulante, un lien Flickr ouvre un diaporama
+de photographie provenant de ce site. Ces images sont récupérées
+dynamiquement sur Flickr à l'aide de leur géolocalisation et d'un "tag"
+de recherche "matane".
 
 ## Références
 
 Pour en savoir plus à propos des technologies utilisées dans cette
 application, visiter leur site web respectif: [Leaflet][leaflet],
-[Lightbox][lightbox], [jQuery][jquery] et [jQuery UI][jqueryui].
+[Lightbox][lightbox], [jQuery][jquery], [jQuery UI][jqueryui] et
+[OpenStreetMap][osm].

@@ -1,0 +1,67 @@
+---
+id: matane
+title: Matane, An attractive and lively city!
+description:
+    A web mapping application demo of Matane city.
+author: Marc-André Barbeau
+created: !!timestamp '2013-05-15 11:00:00'
+tags:
+    - jquery
+    - jqueryui
+    - leaflet
+    - lightbox
+    - openstreetmap
+
+live: http://solutionsmapgears.github.io/demo-matane/index.html
+preview: matane-preview.jpg
+thumbnail: matane-thumb.jpg
+---
+
+{# jinja variables  #}
+
+{# markdown links #}
+[jquery]:   {{links.jquery}}
+[jqueryui]: {{links.jqueryui}}
+[leaflet]:  {{links.leaflet}}
+[lightbox]: {{links.lightbox2}}
+[osm]: {{links.openstreetmap}}
+[mapbox]: http://mapbox.com/tutorial-sherlock/
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+A web mapping application demo of Matane city.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+## Demo goal and origin
+
+The goal of this demo is to show the attractions of a city using various
+navigation methods from using an [OpenStreetMap][osm] map and a contextual
+information list. We borrowed a [Mapbox tutorial][mapbox] to make this demo
+using [Leaflet][leaflet].
+
+## Features
+
+There are several possible ways to obtain the information:
+
+*   Scroll the left list of points of interests down using the mouse or
+    keyboard
+*   Click on a point of interest on the list or on the map
+
+In the "Maison Horace-Bouffard" description, we also added a link to get
+the directions from the tourist information office in Matane to that location.
+
+We also added a link on the top of the list that displays a slideshow
+of pictures dynamically obtained from Flickr using their geolocation and a
+"matane" search tag.
+
+## References
+
+To find out more about the technologies used in this application,
+visit their websites:  [Leaflet][leaflet], [Lightbox][lightbox],
+[jQuery][jquery], [jQuery UI][jqueryui] and [OpenStreetMap][osm].
