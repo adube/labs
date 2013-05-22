@@ -86,6 +86,7 @@ b {
 
 #container section.content {
     border-bottom: 1px solid #949599;
+    border-top: 1px solid #949599;
 }
 
 #container, 
