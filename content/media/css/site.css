@@ -282,7 +282,8 @@ section.content{
 }
 
 section.content img {
-    border: 1px solid black;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 0 10px #777777;
 }
 
 section.content,
@@ -292,7 +293,6 @@ footer .content{
 
 section.content .start,
 section.content .end {
-    font-size: 14px;
 }
 
 section.content .start {
@@ -300,7 +300,6 @@ section.content .start {
 }
 
 section.content .end {
-    border-top: 1px solid #CCC;
     padding: 20px 0 0 0;
 }
 
@@ -378,11 +377,11 @@ section.content .end {
 
 article.post p,
 article.post ul{
-    margin: 0 0 15px 0;
+    margin: 15px 0 15px 0;
 }
 
 article.post img{
-    margin: 0 0 15px 0;
+    margin: 10px 0 10px 0;
 }
 
 article.post ul{

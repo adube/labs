@@ -3,8 +3,14 @@
 {% refer to res.url as post %}
 <article {{'class='~class if class }}>
 <h3><a href="{{ content_url(res.url) }}">{{ res.meta.title }}</a></h3>
+{{ render_post_date(res.meta.created) }}
+{{ post.excerpt|markdown|typogrify }}
+<p>
+  <a class=""
+     href="{{ content_url(res.url) }}">{{ res.meta.i18n.readmore }}</a>
+</p>
 {# if we're inside the archive node and the resource has a thumbnail, use it #}
-<a href="{{ content_url(res.url) }}">
+<a style="display:block;" href="{{ content_url(res.url) }}">
   <img alt="Preview"
   {% if node.name == 'archive' and res.meta.thumbnail %}
        src={{ media_url('images/'~res.meta.thumbnail) }} />
@@ -13,8 +19,8 @@
        src={{ media_url('images/'~res.meta.preview) }} />
   {% endif %}
 </a>
-{{ post.excerpt|markdown|typogrify }}
 {% if res.meta.tags %}
+<h2>{{ res.meta.i18n.posttags }}</h2>
 <div class="tags">
 {% for tag in res.meta.tags %}
     <a class="small-left" 
@@ -23,7 +29,6 @@
 <div style="clear:left;"></div>
 </div>
 {% endif %}
-{{ render_post_date(res.meta.created) }}
 </article>
 {% endmacro %}
 

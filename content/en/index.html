@@ -15,14 +15,16 @@ description: Home page
 </div>
 
 {% if sorted -%}
+
+<hr />
+
 {% for item in sorted %}
 {% if loop.index <= 3 %}
 <div class="item">
 {{ render_excerpt(item, 'post') }}
-
-<a class="button white medium"
-   href="{{ content_url(item.url) }}">{{ resource.meta.i18n.readmore }}</a>
 </div>
+
+<hr />
 {%- endif %}
 {% endfor %}
 {%- endif %}
