@@ -3,27 +3,35 @@
 
 {% block main %}
 <section class="archives">
-<h1 class="tag page-title">{{ tag.name }}</h1>
+<h1 class="tag page-title">{{ resource.meta.i18n.tag }}: {{ tag.name }}</h1>
 <div class="posts">
+{% set active_year = 9999 %}
 {% set lang = resource.meta.language %}
 {% for resource in walker() -%}
-    {% if resource.meta.language == lang%}
-    <div class="post">
-        {{ render_post_shortdate(resource.meta.created) }}
-        <span class="link"><a href="{{ content_url(resource.url) }}">{{ resource.meta.title }}</a></span>
-        {% if resource.meta.tags %}
-        <ul class="tags">
-        {% for tag in resource.meta.tags %}
-        <li>
-            <a href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}"
-               class="small-left" >{{ tag }}</a>
-        </li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-    </div>
-    <div style="clear:left; height: 0;">&nbsp;</div>
+  {% if resource.meta.language == lang%}
+
+    {% set current_year = resource.meta.created.strftime('%Y')|int %}
+    {% if current_year < active_year %}
+      <h2>{{ current_year }}</h2>
+      {% set active_year = current_year %}
     {% endif %}
+
+    <div class="post">
+      <a href="{{ content_url(resource.url) }}">
+        <h4>{{ resource.meta.title }}</h4>
+      </a>
+
+      <div class="tags">
+        {% for tag in resource.meta.tags %}
+          <a href="{{ content_url(lang~'/archive/tags/'~tag~'.html') }}"
+             class="small-left" >{{ tag }}</a>
+        {% endfor %}
+      </div>
+
+      <hr />
+    </div>
+
+  {% endif %}
 {%- endfor %}
 </ul>
 <div class="clear">&nbsp;</div>

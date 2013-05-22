@@ -412,15 +412,18 @@ a.backlink:hover, a.prev:hover, a.next:hover{
 }
 
 .archives div.posts{
-    position: relative;
-    width: 686px;
+}
+
+.archives div.posts h4 {
+  margin: 0;
+}
+
+.archives div.posts .tags{
+  margin: 0 0 15px 10px;
 }
 
 .archives div.post{
-    list-style-type: none;
-    border-bottom: 1px dotted #ccc;
-    float: none;
-    padding: 6px 0 44px 0;
+  margin: 20px 0 20px 10px;
 }
 
 .archives div.post time{
