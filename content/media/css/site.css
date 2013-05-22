@@ -263,7 +263,6 @@ footer{
 
 .page-title{
     font-size: 24px;
-    border-bottom: 1px solid #bbb;
 }
 
 .blog_excerpt h3{
@@ -304,74 +303,6 @@ section.content .end {
 }
 
 /* listing */
-
-.listing{
-    margin-top: 24px;
-}
-
-.listing img{
-    border: 1px solid #000000;
-}
-
-.listing img.force-thumbnail {
-    height: 50%;
-    width: 50%;
-}
-
-.listing li{
-    background-color: #ededed;
-    list-style-type: none;
-    float: left;
-    height: 250px;
-    width: 272px;
-    margin-right: 24px;
-    margin-bottom: 24px;
-    padding: 12px;
-    -moz-box-shadow: 0px 4px 12px #ccc; /* FF3.5+ */
-    -webkit-box-shadow: 0px 4px 12px #ccc; /* Saf3.0+, Chrome */
-          box-shadow: 0px 4px 12px #ccc; /* Opera 10.5, IE 9.0 */
-              filter:  progid:DXImageTransform.Microsoft.dropshadow(OffX=12px, OffY=12px, Color='#ccc'); /* IE6,IE7 */
-          -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=12px, OffY=12px, Color='#ccc')"; /* IE8 */
-
-}
-
-.listing li:nth-child(2){
-    margin-right: 0;
-}
-
-.listing li:nth-child(3){
-    clear: left;
-}
-
-.listing li p{
-}
-
-.listing li .tags{
-    margin: 2px 0 6px 0;
-}
-
-
-.listing h3{
-    border-bottom: 1px solid #ccc;
-    font-size: 12px;
-    line-height: 18px;
-    margin-bottom: 6px;
-}
-
-.listing time{
-    display:block;
-    border-top: 1px solid #ccc;
-    margin: 8px 0 0 0;
-    padding-top: 4px;
-    font-size: 10px;
-}
-
-.listing .small-left {
-    display: block;
-    float: left;
-    font-size: 8pt;
-    line-height: 10pt;
-}
 
 /* Content */
 

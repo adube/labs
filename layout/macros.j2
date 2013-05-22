@@ -10,14 +10,10 @@
      href="{{ content_url(res.url) }}">{{ res.meta.i18n.readmore }}</a>
 </p>
 {# if we're inside the archive node and the resource has a thumbnail, use it #}
-<a style="display:block;" href="{{ content_url(res.url) }}">
+<a href="{{ content_url(res.url) }}">
   <img alt="Preview"
-  {% if node.name == 'archive' and res.meta.thumbnail %}
-       src={{ media_url('images/'~res.meta.thumbnail) }} />
-  {% else %}
        class="force-thumbnail"
        src={{ media_url('images/'~res.meta.preview) }} />
-  {% endif %}
 </a>
 {% if res.meta.tags %}
 <h2>{{ res.meta.i18n.posttags }}</h2>

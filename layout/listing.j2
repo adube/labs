@@ -3,12 +3,14 @@
 {% block main %}
 {% block page_title %}
 <h1 class="page-title">{{ resource.meta.title }}</h1>
+<hr />
 {% endblock %}
-<ul class="listing clear">
+<section class="blog_excerpt">
+<div class="">
 {% for res in resource.node.walk_resources_sorted_by_time() %}
-<li>
-    {{ render_excerpt(res) }}
-</li>
+{{ render_excerpt(res, 'post') }}
+<hr />
 {% endfor %}
-</ul>
+</div>
+</section>
 {% endblock %}
