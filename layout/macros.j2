@@ -104,7 +104,7 @@
  ###}
 {% macro render_post_date(timestamp) -%}
   <time datetime="{{ datetime(timestamp, '%Y-%m-%d') }}">
-    {{ resource.meta.i18n.posted }}:
+    -- {{ resource.meta.i18n.posted }}:
     {{ datetime(timestamp, '%a, %d %b %Y') }}
   </time>
 {%- endmacro %}

@@ -11,16 +11,6 @@
 {% set posts = root.walk_resources_sorted_by_time() %}
 {{ render_post_navigation(resource, posts) if posts }}
 
-{### TAGS ###}
-{% if resource.meta.tags %}
-<div class='post-tags'>
-{% for tag in resource.meta.tags %}
-    <a class="small"
-       href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}">{{ tag }}</a>
-{% endfor %}
-</div>
-{% endif %}
-
 {### TITLE ###}
 <h1 class="blog-title">
     <a href="{{ content_url(resource.url) }}">
@@ -39,6 +29,17 @@
 {%- endmark %}
 {%- endfilter %}
 </div>
+
+{### TAGS ###}
+{% if resource.meta.tags %}
+<h2>{{ resource.meta.i18n.posttags }}</h2>
+<div class='post-tags'>
+{% for tag in resource.meta.tags %}
+    <a class="small-right"
+       href="{{ content_url(resource.meta.language~'/archive/tags/'~tag~'.html') }}">{{ tag }}</a>
+{% endfor %}
+</div>
+{% endif %}
 
 {### NAVIGATION, again ###}
 {{ render_post_navigation(resource, posts) if posts }}

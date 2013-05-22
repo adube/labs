@@ -1,13 +1,5 @@
 * {
     vertical-align: baseline;
-    font-weight: inherit;
-    font-family: inherit;
-    font-style: inherit;
-    text-decoration:inherit;
-    font-size: 100%;
-    padding: 0;
-    border: 0;
-    margin: 0;
 }
 
 article,aside,details,figcaption,figure,
@@ -69,7 +61,8 @@ a:hover{
 }
 
 body{
-    font-family: verdana, "DejaVu", arial, sans-serif;
+    font: normal 15px/21px "Arial", sans-serif;
+    color: #555;
     background-color: black;
     background-image: url(/media/images/site/body-background.jpg);
     background-repeat: repeat-x;
@@ -92,8 +85,6 @@ b {
 }
 
 #container section.content {
-    background-image: url(/media/images/site/main-background.jpg);
-    background-repeat: repeat-x;
     border-bottom: 1px solid #949599;
 }
 
@@ -112,8 +103,7 @@ footer {
 footer{
     background-color: #2D465C;
     color: white;
-    font-size: 9pt;
-    height: 100px;
+    font: normal 10pt/12pt "Arial", sans-serif;
     position: relative;
     text-align: center;
 }
@@ -162,10 +152,13 @@ footer{
     padding: 0 0 0 10px;
 }
 .small-left {
-    font-size: 11px;
+    font-size: 9.5pt;
     padding: 0 5px 0 0;
 }
-
+.small-right {
+    font-size: 9.5pt;
+    padding: 0 0 0 5px;
+}
 
 /* white */
 .white {
@@ -266,9 +259,6 @@ footer{
 .blog-title {
     font-size: 24px;
     line-height: 36px;
-    border-top: 1px solid #bbb;
-    padding: 5px 0 0 0;
-    margin: 5px 0 0 0;
 }
 
 .page-title{
@@ -297,7 +287,7 @@ section.content img {
 
 section.content,
 footer .content{
-    padding: 20px 30px;
+    padding: 20px 60px;
 }
 
 section.content .start,
@@ -355,8 +345,6 @@ section.content .end {
 }
 
 .listing li p{
-    font-size: 10px;
-    line-height: 12px;
 }
 
 .listing li .tags{
@@ -390,9 +378,6 @@ section.content .end {
 
 article.post p,
 article.post ul{
-    color: #222;
-    font-size: 10.5pt;
-    line-height: 14pt;
     margin: 0 0 15px 0;
 }
 
@@ -405,10 +390,8 @@ article.post ul{
 }
 
 .post time{
-    font-size: 12px;
-    color: #666;
-    float:left;
-    margin-top: 6px;
+    color: #999;
+    font-style: italic;
 }
 
 ul.tags{
@@ -442,8 +425,7 @@ h1 a, h2 a, h3 a{
 }
 
 nav.post_nav{
-    font-size: 12px;
-    padding: 4px 0 16px 6px;
+    padding: 4px 0 20px 6px;
 }
 
 a.backlink{
@@ -567,18 +549,14 @@ a.backlink:hover, a.prev:hover, a.next:hover{
 }
 
 .post-tags {
-    float: right;
-    line-height: 1;
-    margin: 10px 5px 0 0;
-    text-align: right;
-    width: 250px;
+    border-bottom: 1px solid #CCC;
+    padding: 0 0 14px 0;
+    margin: 0 0 8px 0;
 }
 
 .post-content {
-    border-bottom: 1px solid #CCC;        
     clear: left;
-    padding: 0 0 10px 0;
-    margin: 30px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
 article.post .post-content a img,
@@ -594,18 +572,18 @@ article.post .post-content p img{
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-    margin: 0 0 15px 0;
 }
 
-.post-content h2 {
+.post-content h2,
+.content h2 {
     color: #5A931E;
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .post-content h3 {
 /*    color: #1E5B94;*/
     color: #941E5B;
-    font-size: 10.5pt;
+    font-size: 13pt;
 }
 
 /****************************
@@ -691,8 +669,13 @@ header.clearfix a.mapgears {
 /* content */
 
 #main .content h1 {
-    color: #828387;
+    font: 25px/28px 'EnigmaticRegular', 'Trebuchet MS', "Arial", sans-serif;
 }
+
+#main .content h1 a {
+    color: #555;
+}
+
 
 /* footer */
 
@@ -713,11 +696,11 @@ footer .content a:hover {
  * sidebar
  */
 .sidebar {
-    background-image: url(/media/images/site/main-background.jpg);
-    background-repeat: repeat-x;
+    background-color: #FAFAFA;
+    border: solid 1px #E8E8E8;
     float: right;
-    padding: 0 0 0 10px;
-    width: 250px;
+    margin: 15px 0 0 40px;
+    width: 300px;
 }
 
 .sidebar .sidebar-title {
@@ -725,16 +708,15 @@ footer .content a:hover {
     background-repeat: repeat-x;
     color: white;
     font: 18px/18px 'EnigmaticRegular', 'Trebuchet MS', Arial, sans-serif;
-    margin: 15px 0 0 0;
     padding: 5px 0 3px 7px;
     position: relative;
     text-align: left;
 }
 
 .sidebar .sidebar-content {
-    font-size: 8.5pt;
+    font-size: 9.5pt;
     margin: 0 0 15px 0;
-    padding: 4px 4px 0 4px;
+    padding: 8px;
 }
 
 .sidebar .sidebar-content span {
