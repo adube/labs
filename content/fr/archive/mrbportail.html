@@ -31,7 +31,9 @@ thumbnail: mrbportail-thumb.jpg
 [defigeohackmtl]: http://defigeohackmtl.org/?page_id=51
 [geomatique2013]: http://www.geomatique2013.com/
 [sigeom]: http://sigeom.mrn.gouv.qc.ca/signet/classes/I0000_serviceWeb
+[gestim]: https://gestim.mines.gouv.qc.ca/MRN_GestimP_Presentation/ODM02401_ie.aspx
 [source]: https://github.com/juliensam/mrbportail
+[mvc]: http://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur
 
 [img_geohack]: {{ img_geohack }}
 
@@ -60,7 +62,8 @@ Parmis les fonctionnalités voulues :
 -   Affichage d’un shapefile (ex. claim public) rapide dans une interface web
 -   Analyse des éléments par un outil de requête simple
 -   Diffusion de ces claims en KML ou comme service web
--   Intégration du service web de [SIGEOM][sigeom]
+-   Intégration de données ouvertes ([SIGEOM][sigeom]) et mise-à-jour
+    automatisées en provenance de [GESTIM][gestim]
 
 
 ## Réalisation
@@ -78,12 +81,13 @@ transformées en images de cartes disponibles pour l'interface.
 
 ### L'interface Web
 
-L'interface Web a été créée à l'aide de [ExtJS 4][extjs] et la partie
-cartographique à l'aide de [GeoExt 2][geoext2] et
-[OpenLayers 2.12][openlayers]. Le modèle MVC supporté nativement dans
-ExtJS a été utilisé afin de bien découper les composantes de
-l'application et a aussi permis à celle-ci d'être compressée en un
-seul fichier JavaScript à des fins de performance.
+Julien-Samuel Lacroix, quand à lui, a créé l'interface Web à l'aide de
+[ExtJS 4][extjs] et la partie cartographique à l'aide de 
+[GeoExt 2][geoext2] et [OpenLayers 2.12][openlayers]. L'architecture
+[MVC][mvc] supportée nativement dans ExtJS a été utilisée afin de
+bien découper les composantes de l'application et a aussi permis
+à celle-ci d'être compressée en un seul fichier JavaScript à des
+fins de performance.
 
 
 ## En quoi consiste le Geohack
