@@ -681,3 +681,19 @@ footer .content a:hover {
     float: left;
     margin: 0 5px 0 0;
 }
+
+a.image-float-left {
+    float: left;
+    margin: 0 15px 5px 0;
+    text-decoration: none;
+}
+
+a.image-float-right {
+    float: right;
+    margin: 0 5px 0 15px;
+    text-decoration: none;
+}
+
+img.geohack {
+    width: 200px;
+}

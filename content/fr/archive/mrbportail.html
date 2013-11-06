@@ -1,0 +1,119 @@
+---
+id: mrbportail
+title: "Intégration de données publiques dans un portail web dans le domaine minier."
+description:
+    
+author: Alexandre Dubé
+created: !!timestamp '2013-10-02 16:00:00'
+tags:
+    - extjs
+    - geoext
+    - mapserver
+    - openlayers
+    - scribe
+live: http://geohack2.mapgears.com/mrbportail/simple.html
+preview: mrbportail-preview.jpg
+thumbnail: mrbportail-thumb.jpg
+---
+
+{# jinja variables  #}
+{% set img_geohack = media_url('images/geohack.jpg') %}
+
+{# markdown links #}
+[extjs]:      {{links.extjs}}
+[geoext2]:     {{links.geoext2}}
+[mapserver]:  {{links.mapserver}}
+[openlayers]: {{links.openlayers}}
+[scribeui]:   {{links.scribeui}}
+[mapgears]:   {{ links.mapgears }}
+
+[mrb]: http://mrbweb.com/
+[defigeohackmtl]: http://defigeohackmtl.org/?page_id=51
+[geomatique2013]: http://www.geomatique2013.com/
+[sigeom]: http://sigeom.mrn.gouv.qc.ca/signet/classes/I0000_serviceWeb
+[source]: https://github.com/juliensam/mrbportail
+
+[img_geohack]: {{ img_geohack }}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+Le défi GéoHack 2013 réalisé par Julien-Samuel Lacroix de Mapgears et
+coordonné par Simon Duchaine de MRB & Associés.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+## Description du défi
+
+[MRB & Associés][mrb] est une compagnie qui oeuvre dans le domaine minier,
+plus précisément dans la gestion de données d’exploration. L'entreprise
+veut offrir à ses clients de nouvelles solutions de consultation de
+leurs données en utilisant les service Web existant combiné à leurs
+données. Le tout via une interface web simple et intuitive.
+
+Parmis les fonctionnalités voulues :
+
+-   Affichage d’un shapefile (ex. claim public) rapide dans une interface web
+-   Analyse des éléments par un outil de requête simple
+-   Diffusion de ces claims en KML ou comme service web
+-   Intégration du service web de [SIGEOM][sigeom]
+
+
+## Réalisation
+
+Le défi s'est divisé en deux parties: la création de cartes avec les
+données géospatiales et la création d'une interface de cartographie Web
+dans laquelle elles ont été affichées.
+
+### Les cartes
+
+Simon Duchaine s'est occupé de la procuction de cartes à l'aide des
+logiciels [MapServer][mapserver] et [ScribeUI][scribeui], ce qui a
+permi une gestion rapide et efficace des données afin qu'elles soient
+transformées en images de cartes disponibles pour l'interface.
+
+### L'interface Web
+
+L'interface Web a été créée à l'aide de [ExtJS 4][extjs] et la partie
+cartographique à l'aide de [GeoExt 2][geoext2] et
+[OpenLayers 2.12][openlayers]. Le modèle MVC supporté nativement dans
+ExtJS a été utilisé afin de bien découper les composantes de
+l'application et a aussi permis à celle-ci d'être compressée en un
+seul fichier JavaScript à des fins de performance.
+
+
+## En quoi consiste le Geohack
+
+<a href="{{ defigeohackmtl }}" class="image-float-left">
+  <img class="geohack" alt="Géohack" src="{{ img_geohack }}">
+</a>
+
+Le [Défi GéoHack de Montréal 2013][defigeohackmtl] est un événement
+dérivé des hackathons qui a eu lieu en marge du
+[Colloque Géomatique 2013][geomatique2013] le 2 octobre 2013. Les
+participants regroupaient des développeurs dans le domaine de la
+géomatique ainsi que des gens d'affaires de différentes entreprises et
+organismes qui agissaient en tant que "Donneurs d'ouvrages" (coordonnateur)
+pour des sujets proposés.
+
+Chaque équipe regroupait un coordonnateur et jusqu'à trois développeurs.
+Ensemble, ils avaient le défi de réaliser une application de cartographie
+Web en une seule journée. Celles-ci devaient être publiées sous licence
+libre afin de tirer profit du patrimoine géographique et des données
+ouvertes de la communauté québécoise du logiciel libre.
+
+<div style="clear:left;"></div>
+
+## Références
+
+Pour en savoir plus à propos des technologies utilisées dans cette
+application, visiter leur site web respectif: [ExtJS][extjs],
+[GeoExt 2][geoext2], [OpenLayers][openlayers], [MapServer][mapserver] et
+[ScribeUI][scribeui].
+
+Le [dépôt du code source][source] de l'application réalisée pendant
+le défi est disponible sur GitHub.

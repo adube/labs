@@ -29,6 +29,7 @@ context:
             extjs: http://docs.sencha.com/ext-js/
             flask: http://flask.pocoo.org/
             geoext: http://geoext.org/
+            geoext2: http://geoext.github.io/geoext2/
             gxp: https://github.com/opengeo/gxp/
             imposm: http://imposm.org/docs/imposm/latest/
             jquery: http://jquery.com/
@@ -45,6 +46,7 @@ context:
             pgrouting: http://pgrouting.org/
             postgis: http://postgis.refractions.net/
             quebec_opendata: http://www.ouvert.gouv.qc.ca/
+            scribeui: http://scribeui.org/
             tinyows: http://www.tinyows.org/
             yuicompressor: http://developer.yahoo.com/yui/compressor/
 meta:
