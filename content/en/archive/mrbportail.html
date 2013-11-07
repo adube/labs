@@ -1,0 +1,144 @@
+---
+id: mrbportail
+title: Integration of Public Data in a Web Portal in Mining
+description:
+    The GeoHack Challenge 2013 by Julien-Samuel Lacroix of Mapgears and
+    coordinated by Simon Duchaine of MRB & associates.
+author: Alexandre Dubé
+created: !!timestamp '2013-10-03 10:00:00'
+tags:
+    - extjs
+    - geoext
+    - mapserver
+    - openlayers
+    - scribe
+live: http://geohack2.mapgears.com/mrbportail/simple.html
+preview: mrbportail-preview.jpg
+thumbnail: mrbportail-thumb.jpg
+---
+
+{# jinja variables  #}
+{% set img_geohack = media_url('images/geohack.jpg') %}
+{% set img_mrb = media_url('images/mrb-associes-logo.jpg') %}
+{% set mrb = 'http://mrbweb.com/?lang=e/' %}
+{% set defigeohackmtl = 'http://defigeohackmtl.org/?page_id=51' %}
+
+{# markdown links #}
+[extjs]:      {{links.extjs}}
+[geoext2]:     {{links.geoext2}}
+[mapserver]:  {{links.mapserver}}
+[openlayers]: {{links.openlayers}}
+[scribeui]:   {{links.scribeui}}
+[mapgears]:   {{ links.mapgears }}
+
+[mrb]: {{mrb}}
+[defigeohackmtl]: {{defigeohackmtl}}
+[bilandefis]: http://defigeohackmtl.org/?page_id=26
+[geomatique2013]: http://www.geomatique2013.com/index.php?lang=en
+[sigeom]: http://sigeom.mrn.gouv.qc.ca/signet/classes/I0000_serviceWeb
+[gestim]: https://gestim.mines.gouv.qc.ca/MRN_GestimP_Presentation/ODM02401_ie.aspx
+[source]: https://github.com/juliensam/mrbportail
+[mvc]: http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+
+[img_geohack]: {{ img_geohack }}
+
+[live]:    {{resource.meta.live}}
+[preview]: {{media_url('images/'~resource.meta.preview)}}
+
+{% mark excerpt -%}
+The GeoHack Challenge 2013 by Julien-Samuel Lacroix of Mapgears and
+coordinated by Simon Duchaine of MRB & associates.
+{%- endmark %}
+
+<p><a href="{{resource.meta.live}}">
+![Preview][preview]
+</a></p>
+
+## Challenge Description
+
+[MRB & Associates][mrb] is a company that operates in mining,
+specifically in exploration data management. The company
+wants to offer its customers new consulting solutions
+for their data using existing web services combined with their
+data. All via a simple and intuitive web interface.
+
+Among the desired features:
+
+-   Display a shapefile (ex. claim public) quickly in a web interface
+-   Elements analysis with a simple query tool
+-   Broadcasting of those claims as KML or as a web service
+-   Integrating open data ([SIGEOM][sigeom]) and automatic updates coming
+    from [GESTIM][gestim]
+
+
+## Production
+
+The challenge was divided into two parts: the creation of maps using
+geospatial data and the creation of a web mapping interface in which
+they're loaded.
+
+### The Maps
+
+Duchaine Simon took care of the production of maps using
+[MapServer][mapserver] and [ScribeUI][scribeui] software, which
+allowed fast and efficient data management to produce images of maps
+available for the web interface.
+
+### The Web Interface
+
+As for Julien-Samuel Lacroix, he created the web interface using
+[ExtJS 4][extjs] and mapping components using [GeoExt 2][geoext2] and
+[OpenLayers 2.12][openlayers]. The [MVC][MVC] architecture natively
+supported in ExtJS has been used to properly manage the components of
+the application and also allowed it to be compressed into a single
+JavaScript file for optimal performance.
+
+
+## What is the Geohack
+
+<a href="{{ defigeohackmtl }}" class="image-float-left">
+  <img class="geohack" alt="Géohack" src="{{ img_geohack }}">
+</a>
+
+The [GeoHack Challenge of Montreal 2013][defigeohackmtl] is an
+hackathon derivative event held within
+[Geomatics Conference 2013][geomatique2013] that took place in
+October 2, 2013. Participants included developers in the field of
+geomatics and business people from different companies and organizations
+that acted as "Job Givers" (coordinator) for subjects suggested.
+
+Each team was composed of one coordinator and up to three
+developers. Together, they had the challenge of making a web mapping
+application in a single day. These had to be published under a free
+license for the benefit of the geographical heritage and open data of
+the Quebec open source community.
+
+The [challenges results][bilandefis] page can be consulted to learn
+more about the various projects that have been made ​​during the event.
+
+<div style="clear:left;"></div>
+
+## About MRB & Associates
+
+<a href="{{ mrb }}" class="image-float-left">
+  <img class="mrb-logo" alt="MRB & Associates" src="{{ img_mrb }}">
+</a>
+
+MRB & Associates provides a comprehensive array of geotechnical and
+mineral exploration services. Project management, exploration
+strategy, data analysis, resource evaluations and NI 43-101 technical
+reports are just a few of the services we offer. Beyond the technical
+aspects of the mining industry, our team produces professional
+promotional material for exhibitions and private financing campaigns.
+
+<div style="clear:left;"></div>
+
+## References
+
+To learn more about the technologies used in this application,
+visit their websites: [ExtJS][extjs],
+[GeoExt 2][geoext2], [OpenLayers][openlayers], [MapServer][mapserver] and
+[ScribeUI][scribeui].
+
+The [source code repository][source] of the produced application during
+the challenge is available on GitHub.
