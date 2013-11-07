@@ -20,6 +20,8 @@ thumbnail: mrbportail-thumb.jpg
 {# jinja variables  #}
 {% set img_geohack = media_url('images/geohack.jpg') %}
 {% set img_mrb = media_url('images/mrb-associes-logo.jpg') %}
+{% set mrb = 'http://mrbweb.com/' %}
+{% set defigeohackmtl = 'http://defigeohackmtl.org/?page_id=51' %}
 
 {# markdown links #}
 [extjs]:      {{links.extjs}}
@@ -29,8 +31,8 @@ thumbnail: mrbportail-thumb.jpg
 [scribeui]:   {{links.scribeui}}
 [mapgears]:   {{ links.mapgears }}
 
-[mrb]: http://mrbweb.com/
-[defigeohackmtl]: http://defigeohackmtl.org/?page_id=51
+[mrb]: {{mrb}}
+[defigeohackmtl]: {{defigeohackmtl}}
 [bilandefis]: http://defigeohackmtl.org/?page_id=26
 [geomatique2013]: http://www.geomatique2013.com/
 [sigeom]: http://sigeom.mrn.gouv.qc.ca/signet/classes/I0000_serviceWeb
